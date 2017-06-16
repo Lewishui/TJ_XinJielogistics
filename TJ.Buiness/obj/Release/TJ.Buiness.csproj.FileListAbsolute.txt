@@ -1,0 +1,14 @@
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\bin\Release\TJ.Buiness.dll
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\bin\Release\TJ.Buiness.pdb
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\bin\Release\IrisSkin2.dll
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\bin\Release\log4net.dll
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\bin\Release\MongoDB.Bson.dll
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\bin\Release\MongoDB.Driver.dll
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\bin\Release\TJ.DB.dll
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\bin\Release\WeifenLuo.WinFormsUI.Docking.dll
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\bin\Release\TJ.DB.pdb
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\obj\Release\TJ.Buiness.csprojResolveAssemblyReference.cache
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\obj\Release\Interop.SHDocVw.dll
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\obj\Release\TJ.Buiness.csproj.ResolveComReference.cache
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\obj\Release\TJ.Buiness.dll
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\obj\Release\TJ.Buiness.pdb

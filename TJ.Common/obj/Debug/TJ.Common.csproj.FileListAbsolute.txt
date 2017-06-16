@@ -1,0 +1,5 @@
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Common\bin\Debug\TJ.Common.dll
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Common\bin\Debug\TJ.Common.pdb
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Common\obj\Debug\TJ.Common.csprojResolveAssemblyReference.cache
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Common\obj\Debug\TJ.Common.dll
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Common\obj\Debug\TJ.Common.pdb

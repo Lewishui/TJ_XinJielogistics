@@ -1,0 +1,14 @@
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\bin\Debug\TJ.Buiness.dll
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\bin\Debug\TJ.Buiness.pdb
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\bin\Debug\IrisSkin2.dll
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\bin\Debug\log4net.dll
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\bin\Debug\MongoDB.Bson.dll
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\bin\Debug\MongoDB.Driver.dll
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\bin\Debug\TJ.DB.dll
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\bin\Debug\TJ.DB.pdb
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\obj\Debug\TJ.Buiness.csprojResolveAssemblyReference.cache
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\obj\Debug\Interop.SHDocVw.dll
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\obj\Debug\TJ.Buiness.csproj.ResolveComReference.cache
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\obj\Debug\TJ.Buiness.dll
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\obj\Debug\TJ.Buiness.pdb

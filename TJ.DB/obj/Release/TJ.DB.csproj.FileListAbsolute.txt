@@ -1,0 +1,4 @@
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.DB\bin\Release\TJ.DB.dll
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.DB\bin\Release\TJ.DB.pdb
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.DB\obj\Release\TJ.DB.dll
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.DB\obj\Release\TJ.DB.pdb

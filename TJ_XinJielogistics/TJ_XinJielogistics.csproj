@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{280FEEBB-FF68-44FF-B3A8-A02004A7270B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TJ_XinJielogistics</RootNamespace>
+    <AssemblyName>TJ_XinJielogistics</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Internet.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IrisSkin2">
+      <HintPath>..\Reference\IrisSkin2.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Reference\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\Reference\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\Reference\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Activities.Core.Presentation" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking">
+      <HintPath>..\Reference\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommandRequest.cs" />
+    <Compile Include="frmAboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAboutBox.Designer.cs">
+      <DependentUpon>frmAboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEdidUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEdidUser.Designer.cs">
+      <DependentUpon>frmEdidUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmlogin.Designer.cs">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewOrder.Designer.cs">
+      <DependentUpon>frmNewOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrder.Designer.cs">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmprint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmprint.Designer.cs">
+      <DependentUpon>frmprint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserManger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserManger.Designer.cs">
+      <DependentUpon>frmUserManger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewUser.Designer.cs">
+      <DependentUpon>frmViewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWrokflow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWrokflow.Designer.cs">
+      <DependentUpon>frmWrokflow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageHelper.cs" />
+    <Compile Include="Pager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pager.designer.cs">
+      <DependentUpon>Pager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmTip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTip.Designer.cs">
+      <DependentUpon>frmTip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewTips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewTips.Designer.cs">
+      <DependentUpon>frmNewTips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTipprint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTipprint.Designer.cs">
+      <DependentUpon>frmTipprint.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmAboutBox.resx">
+      <DependentUpon>frmAboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEdidUser.resx">
+      <DependentUpon>frmEdidUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmlogin.resx">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewOrder.resx">
+      <DependentUpon>frmNewOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrder.resx">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmprint.resx">
+      <DependentUpon>frmprint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserManger.resx">
+      <DependentUpon>frmUserManger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewUser.resx">
+      <DependentUpon>frmViewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWrokflow.resx">
+      <DependentUpon>frmWrokflow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pager.resx">
+      <DependentUpon>Pager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="frmTip.resx">
+      <DependentUpon>frmTip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewTips.resx">
+      <DependentUpon>frmNewTips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTipprint.resx">
+      <DependentUpon>frmTipprint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2.rdlc" />
+    <None Include="app.config" />
+    <None Include="Log4Net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\EventPagingArg.datasource" />
+    <None Include="Properties\DataSources\frmAboutBox.datasource" />
+    <None Include="Properties\DataSources\frmEdidUser.datasource" />
+    <None Include="Properties\DataSources\frmlogin.datasource" />
+    <None Include="Properties\DataSources\frmNewOrder.datasource" />
+    <None Include="Properties\DataSources\frmOrder.datasource" />
+    <None Include="Properties\DataSources\frmOrder.SortableBindingList`1.datasource" />
+    <None Include="Properties\DataSources\frmprint.datasource" />
+    <None Include="Properties\DataSources\frmUserManger.datasource" />
+    <None Include="Properties\DataSources\frmViewUser.datasource" />
+    <None Include="Properties\DataSources\frmViewUser.SortableBindingList`1.datasource" />
+    <None Include="Properties\DataSources\frmWrokflow.datasource" />
+    <None Include="Properties\DataSources\MessageHelper.datasource" />
+    <None Include="Properties\DataSources\Pager.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\TJ.DB.clsOrderDatabaseinfo.datasource" />
+    <None Include="Properties\DataSources\TJ.DB.clsTipsinfo.datasource" />
+    <None Include="Properties\DataSources\TJ.DB.clsuserinfo.datasource" />
+    <None Include="Properties\DataSources\TJ_XinJielogistics.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\TJ_XinJielogistics.Properties.Settings.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SHDocVw">
+      <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Symphony.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TJ.Buiness\TJ.Buiness.csproj">
+      <Project>{ea814784-6ee6-47a1-b9b0-e52356ac947f}</Project>
+      <Name>TJ.Buiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TJ.Common\TJ.Common.csproj">
+      <Project>{513658b5-86fc-45e3-9b66-234994f7500f}</Project>
+      <Name>TJ.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TJ.DB\TJ.DB.csproj">
+      <Project>{7e1b0cb3-3edb-47ea-a9ab-6e25d2e6141b}</Project>
+      <Name>TJ.DB</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Internet.ico" />
+    <None Include="Resources\Symphony1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
