@@ -1,12 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Imaging;
+using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Microsoft.Reporting.WinForms;
+using Microsoft.Win32;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
+using TJ.Common;
 using TJ.DB;
 
 namespace TJ.Buiness
@@ -15,12 +20,23 @@ namespace TJ.Buiness
     {
         string connectionString = "mongodb://127.0.0.1";
         string DB_NAME = "XJ_logistics_TJ";
+        string orderprint;
+        string tisprint;
+
+        #region print
+        private List<Stream> m_streams;
+        private int m_currentPageIndex;
+        List<clsTipsinfo> FilterTIPResults;
+        #endregion
+
+
         public clsAllnew()
         {
             string path = AppDomain.CurrentDomain.BaseDirectory + "System\\IP.txt";
 
             string[] fileText = File.ReadAllLines(path);
             connectionString = "mongodb://" + fileText[0];
+            getUserPint();
 
 
         }
@@ -256,6 +272,7 @@ namespace TJ.Buiness
             }
             foreach (clsOrderDatabaseinfo item in AddMAPResult)
             {
+
                 IMongoQuery query = Query.EQ("_id", new ObjectId(item.Order_id));
                 //collection.Remove(query);
 
@@ -1497,5 +1514,244 @@ namespace TJ.Buiness
                 collection1.Remove(query);
             }
         }
+
+
+        #region 打印
+        //标签量设置
+
+        public void printTIP(clsAllnew BusinessHelp, List<clsOrderDatabaseinfo> FilterOrderResults)
+        {
+
+            //  if (this.checkBox1.Checked == true)
+            {
+                List<clsTipsinfo> FilterTIPResults = new List<clsTipsinfo>();
+                foreach (clsOrderDatabaseinfo temp in FilterOrderResults)
+                {
+                    for (int i = 1; i <= Convert.ToInt32(temp.shijijianshu2); i++)
+                    {
+                        clsTipsinfo item = new clsTipsinfo();
+                        FilterTIPResults = new List<clsTipsinfo>();
+
+                        item.yuandanhao = temp.yundanhao;
+                        item.shifazhan = temp.dizhi;
+                        item.mudizhan = temp.daodaidi2;
+                        item.jianshu = temp.shijijianshu2 + "-" + i.ToString(); //temp.shijijianshu2;
+                        item.shouhuoren = temp.quhuoren3;
+                        item.dianhua = temp.dianhua2;
+                        item.Input_Date = DateTime.Now.ToString("yyyyMMdd");
+                        FilterTIPResults.Add(item);
+                        Run2(FilterTIPResults);
+
+                    }
+                }
+
+
+
+            }
+        }
+        //单独打印
+
+        public void PrintTIP(clsTipsinfo model, int jianshutotal)
+        {
+            for (int j = 1; j <= jianshutotal; j++)
+            {
+                List<clsTipsinfo> FilterOrderResults = new List<clsTipsinfo>();
+
+                clsTipsinfo item = new clsTipsinfo();
+                item = model;
+
+                item.jianshu = jianshutotal + "-" + j.ToString();
+
+                FilterOrderResults.Add(item);
+
+                Run2(FilterOrderResults);
+            }
+        }
+        #region 标签打印
+        public void Run(List<clsOrderDatabaseinfo> FilterOrderResults)
+        {
+            LocalReport report = new LocalReport();
+            //report.ReportPath = @"C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\Report1.rdlc";
+            report.ReportPath = Application.StartupPath + "\\Report1.rdlc";
+
+            //report.DataSources.Add(
+            //   new ReportDataSource("Sales", FilterOrderResults));
+            report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", FilterOrderResults));
+           
+            Export(report);
+            m_currentPageIndex = 0;
+
+            Print(orderprint);
+        }
+        public void Run2(List<clsTipsinfo> FilterOrderResults)
+        {
+            LocalReport report = new LocalReport();
+            // report.ReportPath = @"C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\Report1.rdlc";
+            report.ReportPath = Application.StartupPath + "\\Report2.rdlc";
+            //report.DataSources.Add(
+            //   new ReportDataSource("Sales", FilterOrderResults));
+            report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet2", FilterOrderResults));
+
+            Export2(report);
+            m_currentPageIndex = 0;
+            Print(tisprint);
+        }
+        private void Export2(LocalReport report)
+        {
+            //A4    21*29.7厘米（210mm×297mm）
+            // A5的尺寸:148毫米*210毫米
+            //string deviceInfo =
+            //  "<DeviceInfo>" +
+            //  "  <OutputFormat>EMF</OutputFormat>" +
+            //  "  <PageWidth>8.5in</PageWidth>" +
+            //  "  <PageHeight>11in</PageHeight>" +
+            //  "  <MarginTop>0.25in</MarginTop>" +
+            //  "  <MarginLeft>0.25in</MarginLeft>" +
+            //  "  <MarginRight>0.25in</MarginRight>" +
+            //  "  <MarginBottom>0.25in</MarginBottom>" +
+            //  "</DeviceInfo>";
+
+            string deviceInfo =
+            "<DeviceInfo>" +
+            "  <OutputFormat>EMF</OutputFormat>" +
+            "  <PageWidth>18.9in</PageWidth>" +
+            "  <PageHeight>11.42in</PageHeight>" +
+            "  <MarginTop>0.25in</MarginTop>" +
+            "  <MarginLeft>0.25in</MarginLeft>" +
+            "  <MarginRight>0.25in</MarginRight>" +
+            "  <MarginBottom>0.25in</MarginBottom>" +
+            "</DeviceInfo>";
+            Warning[] warnings;
+            m_streams = new List<Stream>();
+            report.Render("Image", deviceInfo, CreateStream,
+               out warnings);
+            foreach (Stream stream in m_streams)
+                stream.Position = 0;
+        }
+        public void Print(string defaultPrinterName)
+        {
+
+            m_currentPageIndex = 0;
+
+
+
+            if (m_streams == null || m_streams.Count == 0)
+
+                return;
+
+            //声明PrintDocument对象用于数据的打印
+
+            PrintDocument printDoc = new PrintDocument();
+
+            //指定需要使用的打印机的名称，使用空字符串""来指定默认打印机
+
+            if (defaultPrinterName == "" || defaultPrinterName == null)
+                defaultPrinterName = printDoc.PrinterSettings.PrinterName;
+
+            printDoc.PrinterSettings.PrinterName = defaultPrinterName;
+
+            //判断指定的打印机是否可用
+
+            if (!printDoc.PrinterSettings.IsValid)
+            {
+
+                MessageBox.Show("Can't find printer");
+
+                return;
+
+            }
+
+            //声明PrintDocument对象的PrintPage事件，具体的打印操作需要在这个事件中处理。
+
+            printDoc.PrintPage += new PrintPageEventHandler(PrintPage);
+
+            //执行打印操作，Print方法将触发PrintPage事件。
+            printDoc.DefaultPageSettings.Landscape = true;
+            printDoc.Print();
+
+        }
+        private Stream CreateStream(string name, string fileNameExtension,
+
+    Encoding encoding, string mimeType, bool willSeek)
+        {
+
+            //如果需要将报表输出的数据保存为文件，请使用FileStream对象。
+
+            Stream stream = new MemoryStream();
+
+            m_streams.Add(stream);
+
+            return stream;
+
+        }
+        private void PrintPage(object sender, PrintPageEventArgs ev)
+        {
+            Metafile pageImage = new
+               Metafile(m_streams[m_currentPageIndex]);
+            //ev.PageSettings.Landscape = true;
+            ev.Graphics.DrawImage(pageImage, ev.PageBounds);
+            m_currentPageIndex++;
+            ev.HasMorePages = (m_currentPageIndex < m_streams.Count);
+        }
+        public void Export(LocalReport report)
+        {
+            //A4    21*29.7厘米（210mm×297mm）
+            // A5的尺寸:148毫米*210毫米
+            //string deviceInfo =
+            //  "<DeviceInfo>" +
+            //  "  <OutputFormat>EMF</OutputFormat>" +
+            //  "  <PageWidth>8.5in</PageWidth>" +
+            //  "  <PageHeight>11in</PageHeight>" +
+            //  "  <MarginTop>0.25in</MarginTop>" +
+            //  "  <MarginLeft>0.25in</MarginLeft>" +
+            //  "  <MarginRight>0.25in</MarginRight>" +
+            //  "  <MarginBottom>0.25in</MarginBottom>" +
+            //  "</DeviceInfo>";
+
+            string deviceInfo =
+            "<DeviceInfo>" +
+            "  <OutputFormat>EMF</OutputFormat>" +
+            "  <PageWidth>18.9in</PageWidth>" +
+            "  <PageHeight>11.42in</PageHeight>" +
+            "  <MarginTop>0.25in</MarginTop>" +
+            "  <MarginLeft>0.25in</MarginLeft>" +
+            "  <MarginRight>0.25in</MarginRight>" +
+            "  <MarginBottom>0.25in</MarginBottom>" +
+            "</DeviceInfo>";
+            Warning[] warnings;
+            m_streams = new List<Stream>();
+            report.Render("Image", deviceInfo, CreateStream,
+               out warnings);
+            foreach (Stream stream in m_streams)
+                stream.Position = 0;
+        }
+        #endregion
+
+        //获取打印机名称
+        private void getUserPint()
+        {
+            try
+            {
+                RegistryKey rkLocalMachine = Registry.LocalMachine;
+                RegistryKey rkSoftWare = rkLocalMachine.OpenSubKey(clsConstant.RegEdit_Key_SoftWare);
+                RegistryKey rkAmdape2e = rkSoftWare.OpenSubKey(clsConstant.RegEdit_Key_AMDAPE2E);
+                if (rkAmdape2e != null)
+                {
+                    orderprint = clsCommHelp.encryptString(clsCommHelp.NullToString(rkAmdape2e.GetValue(clsConstant.RegEdit_Key_Order)));
+                    tisprint = clsCommHelp.encryptString(clsCommHelp.NullToString(rkAmdape2e.GetValue(clsConstant.RegEdit_Key_Tips)));
+
+                    rkAmdape2e.Close();
+                }
+                rkSoftWare.Close();
+                rkLocalMachine.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw ex;
+            }
+        }
+
+        #endregion
     }
 }

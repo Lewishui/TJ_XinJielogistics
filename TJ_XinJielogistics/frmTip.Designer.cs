@@ -99,22 +99,22 @@
             // noReplaceRadioButton
             // 
             this.noReplaceRadioButton.AutoSize = true;
-            this.noReplaceRadioButton.Checked = true;
             this.noReplaceRadioButton.Location = new System.Drawing.Point(99, 15);
             this.noReplaceRadioButton.Name = "noReplaceRadioButton";
             this.noReplaceRadioButton.Size = new System.Drawing.Size(73, 17);
             this.noReplaceRadioButton.TabIndex = 19;
-            this.noReplaceRadioButton.TabStop = true;
             this.noReplaceRadioButton.Text = "手动打印";
             this.noReplaceRadioButton.UseVisualStyleBackColor = true;
             // 
             // replaceRadioButton
             // 
             this.replaceRadioButton.AutoSize = true;
+            this.replaceRadioButton.Checked = true;
             this.replaceRadioButton.Location = new System.Drawing.Point(8, 15);
             this.replaceRadioButton.Name = "replaceRadioButton";
             this.replaceRadioButton.Size = new System.Drawing.Size(73, 17);
             this.replaceRadioButton.TabIndex = 20;
+            this.replaceRadioButton.TabStop = true;
             this.replaceRadioButton.Text = "自动打印";
             this.replaceRadioButton.UseVisualStyleBackColor = true;
             // 
@@ -277,7 +277,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.dateTimePicker2);
             this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.keywordTextBox);
@@ -287,13 +289,12 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(0, 50);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(672, 89);
+            this.groupBox2.Size = new System.Drawing.Size(666, 89);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(314, 12);
             this.dateTimePicker2.Name = "dateTimePicker2";
@@ -302,7 +303,6 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(88, 12);
             this.dateTimePicker1.Name = "dateTimePicker1";

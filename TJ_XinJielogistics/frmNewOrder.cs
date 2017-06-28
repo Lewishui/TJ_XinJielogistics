@@ -27,7 +27,7 @@ namespace TJ_XinJielogistics
             username = user;
 
             Set_NewMethod(maintype, obj);
-           
+
 
         }
 
@@ -65,7 +65,7 @@ namespace TJ_XinJielogistics
                 textBox12.Text = item.dianhua2;
                 textBox11.Text = item.shouji2;
                 textBox10.Text = item.huowupinming2;
-                textBox9.Text = item.shijijianshu2;
+                numericUpDown1.Text = item.shijijianshu2;
                 textBox7.Text = item.shijizhongliang2;
                 textBox6.Text = item.tijizhongliang2;
                 textBox3.Text = item.baoxianjin2;
@@ -110,28 +110,35 @@ namespace TJ_XinJielogistics
         }
         private void saveButton_Click(object sender, EventArgs e)
         {
-            Result = new List<clsOrderDatabaseinfo>();
-
             item = new clsOrderDatabaseinfo();
+
 
             #region 读取信息
             NewMethod(item);
             #endregion
-            if (ModelId != "")
+            save();
+
+        }
+
+        private void save()
+        {
+            Result = new List<clsOrderDatabaseinfo>();
+          
+            if (ModelId != null && ModelId != "")
                 item.Order_id = ModelId;
 
             Result.Add(item);
 
             clsAllnew BusinessHelp = new clsAllnew();
-            if (ModelId == "")
+            if (ModelId == null || ModelId == "")
                 BusinessHelp.create_OrderServer(Result);
             else
                 BusinessHelp.update_OrderServer(Result);
-
         }
 
         private void NewMethod(clsOrderDatabaseinfo item)
         {
+
             //1
             item.fukuandanwei = this.titleTextBox.Text;
             item.weituoren = textBox1.Text;
@@ -147,14 +154,13 @@ namespace TJ_XinJielogistics
             else if (radioButton3.Checked == true)
                 item.jiesuanfangshi2 = radioButton3.Text;
 
-
             item.shouhuoren2 = textBox15.Text;
             item.danwei2 = textBox14.Text;
             item.dizhi2 = textBox13.Text;
             item.dianhua2 = textBox12.Text;
             item.shouji2 = textBox11.Text;
             item.huowupinming2 = textBox10.Text;
-            item.shijijianshu2 = textBox9.Text;
+            item.shijijianshu2 = numericUpDown1.Text;
             item.shijizhongliang2 = textBox7.Text;
             item.tijizhongliang2 = textBox6.Text;
             item.baoxianjin2 = textBox3.Text;
@@ -215,7 +221,7 @@ namespace TJ_XinJielogistics
             textBox12.Text = "";
             textBox11.Text = "";
             textBox10.Text = "";
-            textBox9.Text = "";
+            numericUpDown1.Text = "";
             textBox7.Text = "";
             textBox6.Text = "";
             textBox3.Text = "";
@@ -361,6 +367,49 @@ namespace TJ_XinJielogistics
         {
             this.Close();
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            item = new clsOrderDatabaseinfo();
+
+            clsAllnew BusinessHelp = new clsAllnew();
+
+            NewMethod(item);
+            List<clsOrderDatabaseinfo> FilterOrderResults = new List<clsOrderDatabaseinfo>();
+            FilterOrderResults.Add(item);
+            BusinessHelp.Run(FilterOrderResults);
+            save();
+        }
+
+
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            clsAllnew BusinessHelp = new clsAllnew();
+            item = new clsOrderDatabaseinfo();
+
+            NewMethod(item);
+            List<clsOrderDatabaseinfo> FilterOrderResults = new List<clsOrderDatabaseinfo>();
+            FilterOrderResults.Add(item);
+            BusinessHelp.Run(FilterOrderResults);
+            BusinessHelp.printTIP(BusinessHelp, FilterOrderResults);
+            save();
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            clsAllnew BusinessHelp = new clsAllnew();
+            item = new clsOrderDatabaseinfo();
+
+            NewMethod(item);
+            List<clsOrderDatabaseinfo> FilterOrderResults = new List<clsOrderDatabaseinfo>();
+            FilterOrderResults.Add(item);
+
+           BusinessHelp. printTIP(BusinessHelp, FilterOrderResults);
+
+           save();
         }
     }
 }

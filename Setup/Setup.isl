@@ -340,23 +340,26 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>Component</td><td>{687F90D8-62EF-4C1B-8E5A-90B372E49B42}</td><td>INSTALLDIR</td><td>2</td><td/><td>File</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>EntityFramework.SqlServer.dll</td><td>{C2899DA4-F106-4F6B-A9F1-524287CDBBEE}</td><td>INSTALLDIR</td><td>2</td><td/><td>entityframework.sqlserver.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>EntityFramework.dll</td><td>{B66AE0E5-0B93-4655-AA8C-3CEB18A6D8F7}</td><td>INSTALLDIR</td><td>2</td><td/><td>entityframework.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>EntityFramework.SqlServer.dll</td><td>{E37EF1EC-36A1-44F8-8DBC-32DAC5D0A138}</td><td>INSTALLDIR</td><td>2</td><td/><td>entityframework.sqlserver.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>EntityFramework.dll</td><td>{546C2611-FF0E-4861-AAC5-67D480FCDEEA}</td><td>INSTALLDIR</td><td>2</td><td/><td>entityframework.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{71E4CA9D-5E84-48B2-9BDD-BE8CA225674B}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{3378F4F0-BD65-46A7-8B15-5D23F0F20FFA}</td><td>LOGS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{67F93AA8-B69C-4B1F-9B81-5298C2C4B859}</td><td>SYSTEM</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>IrisSkin2.dll</td><td>{ED85E18C-8728-4B34-93F2-CE7B5775FDFE}</td><td>INSTALLDIR</td><td>2</td><td/><td>irisskin2.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>MongoDB.Bson.dll</td><td>{77933B2D-8D63-4E4B-9E77-575FA0889F36}</td><td>INSTALLDIR</td><td>2</td><td/><td>mongodb.bson.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>MongoDB.Driver.dll</td><td>{C58EF7B8-000A-4227-813C-BA19C1EA079B}</td><td>INSTALLDIR</td><td>2</td><td/><td>mongodb.driver.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>IrisSkin2.dll</td><td>{0E1C4F24-72AA-4077-9B53-2F18BCD39240}</td><td>INSTALLDIR</td><td>2</td><td/><td>irisskin2.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.Common.dll</td><td>{9CF3F5B9-E982-4EFF-BD92-6DBA33F11972}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.commo</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.ProcessingObjectModel.dll</td><td>{4E92D22A-156B-4DDB-81E4-79A6F417CD99}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.proce</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.WinForms.dll</td><td>{E583A246-F099-4CBE-B636-AC8D6A952C94}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.winfo</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.SqlServer.Types.dll</td><td>{C86FB239-D21E-4697-A7B4-BF88D66C1B95}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.sqlserver.types.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>MongoDB.Bson.dll</td><td>{76DB3EE0-67DC-476B-B4C3-F064946D84A6}</td><td>INSTALLDIR</td><td>2</td><td/><td>mongodb.bson.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>MongoDB.Driver.dll</td><td>{2EDFB3E2-2BD1-4CFD-BD9C-BD478DD751A7}</td><td>INSTALLDIR</td><td>2</td><td/><td>mongodb.driver.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>NewComponent1</td><td>{E5F3A671-DE97-45DB-8A1E-B6BBAC4789E4}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>TJ.Buiness.dll</td><td>{EDD94B43-9D17-4BFF-85D3-17703D79BC4F}</td><td>INSTALLDIR</td><td>2</td><td/><td>tj.buiness.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>TJ.Common.dll</td><td>{1088A506-78A7-4E3E-9BBC-941F5721F3D4}</td><td>INSTALLDIR</td><td>2</td><td/><td>tj.common.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>TJ.DB.dll</td><td>{1B1EB33B-8D03-44CE-B42F-1D9A2633E3D4}</td><td>INSTALLDIR</td><td>2</td><td/><td>tj.db.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>TJ_XinJielogistics.exe</td><td>{E29B2AC1-3356-4ED8-9663-C430426A8D82}</td><td>INSTALLDIR</td><td>2</td><td/><td>tj_xinjielogistics.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>TJ_XinJielogistics.vshost.exe</td><td>{9B93A500-3782-4A90-9576-4B17F00BCD3A}</td><td>INSTALLDIR</td><td>2</td><td/><td>tj_xinjielogistics.vshost.ex</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td>{8D2857D5-4694-4CFC-BB09-FED94CC9F9BA}</td><td>INSTALLDIR</td><td>2</td><td/><td>weifenluo.winformsui.docking</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>log4net.dll</td><td>{A2757E02-3243-41D9-818A-F70E7FC9F009}</td><td>INSTALLDIR</td><td>2</td><td/><td>log4net.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>TJ.Buiness.dll</td><td>{D1F155D4-AF58-4076-9BA6-D9E4CCB155CE}</td><td>INSTALLDIR</td><td>2</td><td/><td>tj.buiness.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>TJ.Common.dll</td><td>{3AF86196-B051-451C-9F20-521013E43CF5}</td><td>INSTALLDIR</td><td>2</td><td/><td>tj.common.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>TJ.DB.dll</td><td>{98D14EB7-7C05-4514-8774-2CB53917F0AA}</td><td>INSTALLDIR</td><td>2</td><td/><td>tj.db.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>TJ_XinJielogistics.exe</td><td>{B05B22D5-C769-40EC-8342-D74F4A980415}</td><td>INSTALLDIR</td><td>2</td><td/><td>tj_xinjielogistics.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>TJ_XinJielogistics.vshost.exe</td><td>{3E404CB1-D4E9-4994-8A2C-0B06AEF3403F}</td><td>INSTALLDIR</td><td>2</td><td/><td>tj_xinjielogistics.vshost.ex</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td>{FECDED8D-BB34-4720-8FAC-3825A18A3352}</td><td>INSTALLDIR</td><td>2</td><td/><td>weifenluo.winformsui.docking</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>log4net.dll</td><td>{A4E1114C-F19A-40F8-BCDC-470111AE7ACD}</td><td>INSTALLDIR</td><td>2</td><td/><td>log4net.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1066,6 +1069,7 @@
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
 		<row><td>INSTALLDIR</td><td>NewComponent1</td></row>
+		<row><td>LOGS</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 	</table>
 
 	<table name="CustomAction">
@@ -1876,13 +1880,16 @@
 	<table name="FeatureComponents">
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
-		<row><td>AlwaysInstall</td><td>Component</td></row>
 		<row><td>AlwaysInstall</td><td>EntityFramework.SqlServer.dll</td></row>
 		<row><td>AlwaysInstall</td><td>EntityFramework.dll</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT2</td></row>
 		<row><td>AlwaysInstall</td><td>IrisSkin2.dll</td></row>
+		<row><td>AlwaysInstall</td><td>Microsoft.ReportViewer.Common.dll</td></row>
+		<row><td>AlwaysInstall</td><td>Microsoft.ReportViewer.ProcessingObjectModel.dll</td></row>
+		<row><td>AlwaysInstall</td><td>Microsoft.ReportViewer.WinForms.dll</td></row>
+		<row><td>AlwaysInstall</td><td>Microsoft.SqlServer.Types.dll</td></row>
 		<row><td>AlwaysInstall</td><td>MongoDB.Bson.dll</td></row>
 		<row><td>AlwaysInstall</td><td>MongoDB.Driver.dll</td></row>
 		<row><td>AlwaysInstall</td><td>NewComponent1</td></row>
@@ -1907,7 +1914,6 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>File</td><td>Component</td><td>TJ_XinJielogistics.主输出</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;TJ_XinJielogistics&gt;|Built</td><td>3</td><td/></row>
 		<row><td>File.xls</td><td>ISX_DEFAULTCOMPONENT</td><td>系统使~1.XLS|系统使用说明.xls</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\系统使用说明.xls</td><td>1</td><td/></row>
 		<row><td>entityframework.dll</td><td>EntityFramework.dll</td><td>ENTITY~1.DLL|EntityFramework.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\EntityFramework.dll</td><td>1</td><td/></row>
 		<row><td>entityframework.sqlserver.dl</td><td>EntityFramework.SqlServer.dll</td><td>ENTITY~1.DLL|EntityFramework.SqlServer.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\EntityFramework.SqlServer.dll</td><td>1</td><td/></row>
@@ -1917,13 +1923,15 @@
 		<row><td>irisskin2.dll</td><td>IrisSkin2.dll</td><td>IRISSK~1.DLL|IrisSkin2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\IrisSkin2.dll</td><td>1</td><td/></row>
 		<row><td>log4net.config</td><td>ISX_DEFAULTCOMPONENT</td><td>LOG4NE~1.CON|Log4Net.config</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\Log4Net.config</td><td>1</td><td/></row>
 		<row><td>log4net.dll</td><td>log4net.dll</td><td>log4net.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\log4net.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.reportviewer.commo</td><td>Microsoft.ReportViewer.Common.dll</td><td>MICROS~1.DLL|Microsoft.ReportViewer.Common.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\Microsoft.ReportViewer.Common.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.reportviewer.proce</td><td>Microsoft.ReportViewer.ProcessingObjectModel.dll</td><td>MICROS~1.DLL|Microsoft.ReportViewer.ProcessingObjectModel.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.reportviewer.winfo</td><td>Microsoft.ReportViewer.WinForms.dll</td><td>MICROS~1.DLL|Microsoft.ReportViewer.WinForms.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\Microsoft.ReportViewer.WinForms.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.sqlserver.types.dl</td><td>Microsoft.SqlServer.Types.dll</td><td>MICROS~1.DLL|Microsoft.SqlServer.Types.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\Microsoft.SqlServer.Types.dll</td><td>1</td><td/></row>
 		<row><td>mongodb.bson.dll</td><td>MongoDB.Bson.dll</td><td>MONGOD~1.DLL|MongoDB.Bson.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\MongoDB.Bson.dll</td><td>1</td><td/></row>
 		<row><td>mongodb.driver.dll</td><td>MongoDB.Driver.dll</td><td>MONGOD~1.DLL|MongoDB.Driver.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\MongoDB.Driver.dll</td><td>1</td><td/></row>
 		<row><td>report1.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|Report1.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\Report1.rdlc</td><td>1</td><td/></row>
 		<row><td>report2.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|Report2.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\Report2.rdlc</td><td>1</td><td/></row>
 		<row><td>sportscyan.ssk</td><td>ISX_DEFAULTCOMPONENT</td><td>SPORTS~1.SSK|SportsCyan.ssk</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\SportsCyan.ssk</td><td>1</td><td/></row>
-		<row><td>systemlog_process20170616.lo</td><td>ISX_DEFAULTCOMPONENT1</td><td>SYSTEM~1.LOG|SystemLog_Process20170616.log</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\Logs\SystemLog_Process20170616.log</td><td>1</td><td/></row>
-		<row><td>systemlog_systemexception201</td><td>ISX_DEFAULTCOMPONENT1</td><td>SYSTEM~1.LOG|SystemLog_SystemException20170616.log</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\Logs\SystemLog_SystemException20170616.log</td><td>1</td><td/></row>
 		<row><td>tj.buiness.dll</td><td>TJ.Buiness.dll</td><td>TJBUIN~1.DLL|TJ.Buiness.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\TJ.Buiness.dll</td><td>1</td><td/></row>
 		<row><td>tj.buiness.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>TJBUIN~1.PDB|TJ.Buiness.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\TJ.Buiness.pdb</td><td>1</td><td/></row>
 		<row><td>tj.common.dll</td><td>TJ.Common.dll</td><td>TJCOMM~1.DLL|TJ.Common.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\TJ.Common.dll</td><td>1</td><td/></row>
@@ -2195,23 +2203,26 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>Component</td><td/><td/><td>_7D6EBBB7_D2CF_4C0D_8507_D652599A6971_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>EntityFramework.SqlServer.dll</td><td/><td/><td>_AC1C98F3_D75C_45E8_8534_381754A89878_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>EntityFramework.dll</td><td/><td/><td>_8813CB29_2EAF_42E7_A6E4_CA63DACF5BEE_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>EntityFramework.SqlServer.dll</td><td/><td/><td>_87BB5048_10E4_49EB_A568_CB41C80809A0_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>EntityFramework.dll</td><td/><td/><td>_915B2953_9E72_45F7_9B6D_07E836EC9C63_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_0A8BED1B_7D90_4D15_B1F4_A8544E87058D_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_B8A77164_470E_4EDB_B2B4_8F7FA83836D8_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_FDE39D7D_9609_4BD7_84F2_A705D2DEAC8A_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>IrisSkin2.dll</td><td/><td/><td>_07AB1D7B_5B81_4BA8_AD32_FDFA172FD701_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>MongoDB.Bson.dll</td><td/><td/><td>_74D74CE7_1741_4EE9_83E8_A35D39E875AE_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>MongoDB.Driver.dll</td><td/><td/><td>_C5342ECE_7A18_4C57_8849_2ADAB0F5A238_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>IrisSkin2.dll</td><td/><td/><td>_DF94D1B7_A64C_4CD9_BF74_B8A4EF496ECA_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.Common.dll</td><td/><td/><td>_A4D85919_39FF_457D_91E0_FBD818D910EF_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.ProcessingObjectModel.dll</td><td/><td/><td>_ADBECC8F_75AE_481F_9A8F_541469507225_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.WinForms.dll</td><td/><td/><td>_546D9340_2523_4883_BCCA_85BD2E6439CC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.SqlServer.Types.dll</td><td/><td/><td>_1F20E2A4_4301_453A_BAC9_DC3ECD1B0BED_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>MongoDB.Bson.dll</td><td/><td/><td>_2014F5E6_4D51_4211_923C_48094B0CCC57_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>MongoDB.Driver.dll</td><td/><td/><td>_41AAB22E_5A9D_47F0_B7E7_57781362CECE_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>NewComponent1</td><td/><td/><td>_AB296C04_A77C_494D_A78B_D4A2EEE62B9A_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>TJ.Buiness.dll</td><td/><td/><td>_589BB79A_B722_406A_B018_2C65D7D9931C_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>TJ.Common.dll</td><td/><td/><td>_50C9669D_FDB0_469C_AE34_F807F7073505_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>TJ.DB.dll</td><td/><td/><td>_DEA922DC_729D_49A2_8CC4_2975888D2178_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>TJ_XinJielogistics.exe</td><td/><td/><td>_5F3EFA5E_313D_4501_9333_EC40A7874B4D_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>TJ_XinJielogistics.vshost.exe</td><td/><td/><td>_E790EFD3_930F_4A8D_B4D6_A4852D993C65_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td/><td/><td>_6ABE9962_FC08_447B_B663_30A32565B16F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>log4net.dll</td><td/><td/><td>_CAF19D81_7FAD_4BC9_9E3A_24F632DB35E4_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>TJ.Buiness.dll</td><td/><td/><td>_96DA1271_0021_478A_9CB7_BA3757A99B13_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>TJ.Common.dll</td><td/><td/><td>_D66121E4_B437_42B7_A37A_284F0CEA359D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>TJ.DB.dll</td><td/><td/><td>_829D1379_80B9_44BA_B6E3_78EDAFEF4864_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>TJ_XinJielogistics.exe</td><td/><td/><td>_7382E234_BE32_498B_8799_700A6BC544CD_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>TJ_XinJielogistics.vshost.exe</td><td/><td/><td>_579B6634_B486_4EEE_A81E_7680EDBFBB42_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td/><td/><td>_BBEE0500_0C2B_4E55_A163_A552E8FC73B5_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>log4net.dll</td><td/><td/><td>_7F4B7803_F894_4907_8BFA_14700A6220DD_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -3658,6 +3669,10 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>2052</td><td>LAUNCH~1.EXE|Launch TJ_XinJielogistics.exe</td><td>0</td><td/><td>-2094716659</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td/><td>0</td><td/><td>-2094716659</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>2052</td><td>LAUNCH~1.EXE|Launch TJ_XinJielogistics.vshost.exe</td><td>0</td><td/><td>-2094716659</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td/><td>0</td><td/><td>-618303343</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>2052</td><td>LAUNCH~1.EXE|Launch TJ_XinJielogistics.exe</td><td>0</td><td/><td>-618303343</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1033</td><td/><td>0</td><td/><td>-618303343</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>2052</td><td>LAUNCH~1.EXE|Launch TJ_XinJielogistics.vshost.exe</td><td>0</td><td/><td>-618303343</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>2052</td><td>从以下服务器列表中选择要连接的数据库服务器。</td><td>0</td><td/><td>-2094696211</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>2052</td><td>从以下的编录名称列表中，选择您希望将其作为目标的数据库编录。</td><td>0</td><td/><td>-2094696211</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>2052</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>-2094696211</td></row>
@@ -4061,7 +4076,9 @@
 		<col def="I2">ISIconIndex</col>
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\setupicon.ico</td><td>0</td></row>
 		<row><td>TJ_XinJielogistics_496C53ED08F9435A901839CEE57C76F9.exe</td><td/><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\TJ_XinJielogistics.exe</td><td>0</td></row>
+		<row><td>TJ_XinJielogistics_A2D349AB4A91491293ED1929EE13D608.exe</td><td/><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\TJ_XinJielogistics.exe</td><td>0</td></row>
 		<row><td>TJ_XinJielogistics_BD679A86796E481C9739770E910CA964.exe</td><td/><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\TJ_XinJielogistics.exe</td><td>0</td></row>
+		<row><td>TJ_XinJielogistics_E55564491110464CB5F79A2007B404B3.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>UNINST_Uninstall_S_91A85EC8D40E4657A413ED05931E4FB1.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2012SpringLE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
 	</table>
 
@@ -4646,9 +4663,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="L255">FileName</col>
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
-		<row><td>FileKey1</td><td>TJ_XinJielogistics.exe</td><td/><td>company_name</td><td>2</td></row>
-		<row><td>FileKey2</td><td>TJ_XinJielogistics.exe</td><td/><td>setup</td><td>2</td></row>
 		<row><td>TJ_XinJielogistics.exe</td><td>TJ_XinJielogistics.exe</td><td/><td>setup</td><td>2</td></row>
+		<row><td>TJ_XinJielogistics.vshost.exe</td><td>TJ_XinJielogistics.vshost.exe</td><td/><td>setup</td><td>2</td></row>
 		<row><td>UNINST_Uninstall_Setup</td><td>NewComponent1</td><td/><td>setup</td><td>2</td></row>
 	</table>
 
@@ -4735,8 +4751,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>TJ_XinJielogistics.exe</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME1##</td><td>TJ_XinJielogistics.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>TJ_XinJielogistics_496C53ED08F9435A901839CEE57C76F9.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>TJ_XinJielogistics.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME1##</td><td>TJ_XinJielogistics.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>TJ_XinJielogistics_BD679A86796E481C9739770E910CA964.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>TJ_XinJielogistics.exe</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME3##</td><td>TJ_XinJielogistics.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>TJ_XinJielogistics_A2D349AB4A91491293ED1929EE13D608.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>TJ_XinJielogistics.vshost.exe</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME4##</td><td>TJ_XinJielogistics.vshost.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>TJ_XinJielogistics_E55564491110464CB5F79A2007B404B3.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>UNINST_Uninstall_Setup</td><td>setup</td><td>UNINST|Uninstall Setup</td><td>NewComponent1</td><td>[SystemFolder]msiexec.exe</td><td>/x {7B41A07C-631C-448E-B20C-6064D21F4833}</td><td/><td/><td>UNINST_Uninstall_S_91A85EC8D40E4657A413ED05931E4FB1.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 

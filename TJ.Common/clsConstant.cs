@@ -19,8 +19,8 @@ namespace TJ.Common
         public const string RegEdit_Key_Date = "date";
         public const string RegEdit_Key_Checkbox = "Checkbox";
         public const string RegEdit_Key_NPO_cloumn = "ChinaRawDataHide_cloumn";
-        public const string RegEdit_Key_Save_S = "ChinaAM_Save_S ";
-        public const string RegEdit_Key_assistMain = "ChinaAM_assistMain ";
+        public const string RegEdit_Key_Order = "Order";
+        public const string RegEdit_Key_Tips = "Tips";
         public const string RegEdit_Key_AutoNext = "ChinaAM_AutoNext ";
 
         //public const string RegEdit_Key_SingleRawData_cloumn = "TWSingleRawRawDataHide_cloumn";

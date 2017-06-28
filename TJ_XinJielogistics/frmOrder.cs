@@ -36,7 +36,7 @@ namespace TJ_XinJielogistics
         {
             InitializeComponent();
             Useramin = isadmin;
-            username =user ;
+            username = user;
         }
         public void BeginActive()
         {
@@ -46,7 +46,7 @@ namespace TJ_XinJielogistics
 
         private void newButton_Click(object sender, EventArgs e)
         {
-            var form = new frmNewOrder("create", null,username);
+            var form = new frmNewOrder("create", null, username);
             if (form.ShowDialog() == System.Windows.Forms.DialogResult.Yes)
             {
 
@@ -202,7 +202,7 @@ namespace TJ_XinJielogistics
 
                 var model = row.DataBoundItem as clsOrderDatabaseinfo;
 
-                var form = new frmNewOrder("Edit", model,username);
+                var form = new frmNewOrder("Edit", model, username);
                 if (form.ShowDialog() == DialogResult.Yes)
                 {
                     BeginActive();
@@ -237,7 +237,12 @@ namespace TJ_XinJielogistics
         private void button1_Click(object sender, EventArgs e)
         {
             if (dataGridView.RowCount == 0 || dataGridView.RowCount < RowRemark)
+            {
+                MessageBox.Show("请选择要打印的单子，谢谢", "打印", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 return;
+            }
+            clsAllnew BusinessHelp = new clsAllnew();
 
             FilterOrderResults = new List<clsOrderDatabaseinfo>();
 
@@ -252,8 +257,6 @@ namespace TJ_XinJielogistics
                     row = dataGridView.Rows[i];
                     model = row.DataBoundItem as clsOrderDatabaseinfo;
                     FilterOrderResults.Add(model);
-
-                    //FilterOrderResults.Add(model);
                     if (this.noReplaceRadioButton.Checked == true)
                     {
                         var form = new frmprint(FilterOrderResults);
@@ -264,61 +267,26 @@ namespace TJ_XinJielogistics
                     }
                     else if (this.replaceRadioButton.Checked == true)
                     {
-                        //LocalReport report = new LocalReport();
-                        //report.ReportPath = @"C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\Report1.rdlc";
-                        //report.EnableExternalImages = true;
-                        //var qtyTable = new DataTable();
-                        //qtyTable.TableName = "order";
-                        //qtyTable.Columns.Add("卖场", System.Type.GetType("System.String"));//0
-                        //ReportDataSource source = new ReportDataSource("order", qtyTable);
-                        //report.DataSources.Add(source);
-                        //report.Refresh();
-                        Run();
-                        //var form = new frmprint(FilterOrderResults);
-                        //form.PPrint();
+
+                        BusinessHelp.Run(FilterOrderResults);
+
 
                     }
                     if (this.checkBox1.Checked == true)
                     {
-                        FilterTIPResults = new List<clsTipsinfo>();
-                        foreach (clsOrderDatabaseinfo temp in FilterOrderResults)
-                        {
-                            clsTipsinfo item = new clsTipsinfo();
+                        BusinessHelp.printTIP(BusinessHelp, FilterOrderResults);
 
-                            item.yuandanhao = temp.yundanhao;
-                            item.shifazhan = temp.dizhi;
-                            item.mudizhan = temp.daodaidi2;
-                            item.jianshu = temp.shijijianshu2;
-                            item.shouhuoren = temp.quhuoren3;
-                            item.dianhua = temp.dianhua2;
-                            item.Input_Date = DateTime.Now.ToString("yyyyMMdd");
-                            FilterTIPResults.Add(item);
-
-                        }
-                        Run2();
 
 
                     }
                 }
             }
-            MessageBox.Show("打印完成，请核对打印信息，谢谢", "打印", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (this.replaceRadioButton.Checked == true)
+                MessageBox.Show("打印完成，请核对打印信息，谢谢", "打印", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             return;
         }
-        private void Run()
-        {
-            LocalReport report = new LocalReport();
-            //report.ReportPath = @"C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\Report1.rdlc";
-            report.ReportPath = Application.StartupPath + "\\Report1.rdlc";
 
-            //report.DataSources.Add(
-            //   new ReportDataSource("Sales", FilterOrderResults));
-            report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", FilterOrderResults));
-
-            Export(report);
-            m_currentPageIndex = 0;
-            Print();
-        }
         private DataTable LoadSalesData()
         {
             // Create a new DataSet and read sales data file 
@@ -337,106 +305,13 @@ namespace TJ_XinJielogistics
                 m_streams = null;
             }
         }
-        private void Export(LocalReport report)
-        {
-            //A4    21*29.7厘米（210mm×297mm）
-            // A5的尺寸:148毫米*210毫米
-            //string deviceInfo =
-            //  "<DeviceInfo>" +
-            //  "  <OutputFormat>EMF</OutputFormat>" +
-            //  "  <PageWidth>8.5in</PageWidth>" +
-            //  "  <PageHeight>11in</PageHeight>" +
-            //  "  <MarginTop>0.25in</MarginTop>" +
-            //  "  <MarginLeft>0.25in</MarginLeft>" +
-            //  "  <MarginRight>0.25in</MarginRight>" +
-            //  "  <MarginBottom>0.25in</MarginBottom>" +
-            //  "</DeviceInfo>";
 
-            string deviceInfo =
-            "<DeviceInfo>" +
-            "  <OutputFormat>EMF</OutputFormat>" +
-            "  <PageWidth>18.9in</PageWidth>" +
-            "  <PageHeight>11.42in</PageHeight>" +
-            "  <MarginTop>0.25in</MarginTop>" +
-            "  <MarginLeft>0.25in</MarginLeft>" +
-            "  <MarginRight>0.25in</MarginRight>" +
-            "  <MarginBottom>0.25in</MarginBottom>" +
-            "</DeviceInfo>";
-            Warning[] warnings;
-            m_streams = new List<Stream>();
-            report.Render("Image", deviceInfo, CreateStream,
-               out warnings);
-            foreach (Stream stream in m_streams)
-                stream.Position = 0;
-        }
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             RowRemark = e.RowIndex;
             cloumn = e.ColumnIndex;
         }
-        private Stream CreateStream(string name, string fileNameExtension,
 
-    Encoding encoding, string mimeType, bool willSeek)
-        {
-
-            //如果需要将报表输出的数据保存为文件，请使用FileStream对象。
-
-            Stream stream = new MemoryStream();
-
-            m_streams.Add(stream);
-
-            return stream;
-
-        }
-
-        private void Print()
-        {
-
-            m_currentPageIndex = 0;
-
-
-
-            if (m_streams == null || m_streams.Count == 0)
-
-                return;
-
-            //声明PrintDocument对象用于数据的打印
-
-            PrintDocument printDoc = new PrintDocument();
-
-            //指定需要使用的打印机的名称，使用空字符串""来指定默认打印机
-            string defaultPrinterName = printDoc.PrinterSettings.PrinterName;
-            printDoc.PrinterSettings.PrinterName = defaultPrinterName;
-
-            //判断指定的打印机是否可用
-
-            if (!printDoc.PrinterSettings.IsValid)
-            {
-
-                MessageBox.Show("Can't find printer");
-
-                return;
-
-            }
-
-            //声明PrintDocument对象的PrintPage事件，具体的打印操作需要在这个事件中处理。
-
-            printDoc.PrintPage += new PrintPageEventHandler(PrintPage);
-
-            //执行打印操作，Print方法将触发PrintPage事件。
-            printDoc.DefaultPageSettings.Landscape = true;
-            printDoc.Print();
-
-        }
-        private void PrintPage(object sender, PrintPageEventArgs ev)
-        {
-            Metafile pageImage = new
-               Metafile(m_streams[m_currentPageIndex]);
-            //ev.PageSettings.Landscape = true;
-            ev.Graphics.DrawImage(pageImage, ev.PageBounds);
-            m_currentPageIndex++;
-            ev.HasMorePages = (m_currentPageIndex < m_streams.Count);
-        }
 
         //private void PrintPage(object sender, PrintPageEventArgs ev)
         //{
@@ -466,54 +341,7 @@ namespace TJ_XinJielogistics
         //    ev.HasMorePages = (m_currentPageIndex < m_streams.Count);
 
         //}
-        #region 标签打印
-        private void Run2()
-        {
-            LocalReport report = new LocalReport();
-            // report.ReportPath = @"C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\Report1.rdlc";
-            report.ReportPath = Application.StartupPath + "\\Report2.rdlc";
-            //report.DataSources.Add(
-            //   new ReportDataSource("Sales", FilterOrderResults));
-            report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet2", FilterOrderResults));
 
-            Export2(report);
-            m_currentPageIndex = 0;
-            Print();
-        }
-        private void Export2(LocalReport report)
-        {
-            //A4    21*29.7厘米（210mm×297mm）
-            // A5的尺寸:148毫米*210毫米
-            //string deviceInfo =
-            //  "<DeviceInfo>" +
-            //  "  <OutputFormat>EMF</OutputFormat>" +
-            //  "  <PageWidth>8.5in</PageWidth>" +
-            //  "  <PageHeight>11in</PageHeight>" +
-            //  "  <MarginTop>0.25in</MarginTop>" +
-            //  "  <MarginLeft>0.25in</MarginLeft>" +
-            //  "  <MarginRight>0.25in</MarginRight>" +
-            //  "  <MarginBottom>0.25in</MarginBottom>" +
-            //  "</DeviceInfo>";
-
-            string deviceInfo =
-            "<DeviceInfo>" +
-            "  <OutputFormat>EMF</OutputFormat>" +
-            "  <PageWidth>18.9in</PageWidth>" +
-            "  <PageHeight>11.42in</PageHeight>" +
-            "  <MarginTop>0.25in</MarginTop>" +
-            "  <MarginLeft>0.25in</MarginLeft>" +
-            "  <MarginRight>0.25in</MarginRight>" +
-            "  <MarginBottom>0.25in</MarginBottom>" +
-            "</DeviceInfo>";
-            Warning[] warnings;
-            m_streams = new List<Stream>();
-            report.Render("Image", deviceInfo, CreateStream,
-               out warnings);
-            foreach (Stream stream in m_streams)
-                stream.Position = 0;
-        }
-
-        #endregion
 
         private void btdown_Click(object sender, EventArgs e)
         {

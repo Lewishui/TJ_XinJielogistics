@@ -65,6 +65,10 @@
     <Compile Include="xtBiz.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TJ.Common\TJ.Common.csproj">
+      <Project>{513658b5-86fc-45e3-9b66-234994f7500f}</Project>
+      <Name>TJ.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TJ.DB\TJ.DB.csproj">
       <Project>{7e1b0cb3-3edb-47ea-a9ab-6e25d2e6141b}</Project>
       <Name>TJ.DB</Name>

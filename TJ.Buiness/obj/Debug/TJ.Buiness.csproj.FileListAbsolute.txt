@@ -12,3 +12,5 @@ C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buine
 C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\obj\Debug\TJ.Buiness.csproj.ResolveComReference.cache
 C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\obj\Debug\TJ.Buiness.dll
 C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\obj\Debug\TJ.Buiness.pdb
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\bin\Debug\TJ.Common.dll
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\bin\Debug\TJ.Common.pdb

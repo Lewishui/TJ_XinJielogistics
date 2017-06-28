@@ -137,6 +137,12 @@
     <Compile Include="frmprint.Designer.cs">
       <DependentUpon>frmprint.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSetPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetPrint.Designer.cs">
+      <DependentUpon>frmSetPrint.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUserManger.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmprint.resx">
       <DependentUpon>frmprint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetPrint.resx">
+      <DependentUpon>frmSetPrint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUserManger.resx">
       <DependentUpon>frmUserManger.cs</DependentUpon>

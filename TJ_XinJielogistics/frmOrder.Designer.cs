@@ -34,23 +34,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.noReplaceRadioButton = new System.Windows.Forms.RadioButton();
             this.replaceRadioButton = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.btdown = new System.Windows.Forms.Button();
-            this.newButton = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.keywordTextBox = new System.Windows.Forms.TextBox();
-            this.btfind = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.CheckColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.fukuandanwe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.weituoren = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,6 +51,17 @@
             this.dianhua2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.deleteColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btdown = new System.Windows.Forms.Button();
+            this.newButton = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.keywordTextBox = new System.Windows.Forms.TextBox();
+            this.btfind = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pager1 = new TJ_XinJielogistics.Pager();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -99,25 +99,35 @@
             this.groupBox3.TabIndex = 23;
             this.groupBox3.TabStop = false;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(178, 16);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(50, 17);
+            this.checkBox1.TabIndex = 24;
+            this.checkBox1.Text = "标签";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // noReplaceRadioButton
             // 
             this.noReplaceRadioButton.AutoSize = true;
-            this.noReplaceRadioButton.Checked = true;
             this.noReplaceRadioButton.Location = new System.Drawing.Point(99, 15);
             this.noReplaceRadioButton.Name = "noReplaceRadioButton";
             this.noReplaceRadioButton.Size = new System.Drawing.Size(73, 17);
             this.noReplaceRadioButton.TabIndex = 19;
-            this.noReplaceRadioButton.TabStop = true;
             this.noReplaceRadioButton.Text = "手动打印";
             this.noReplaceRadioButton.UseVisualStyleBackColor = true;
             // 
             // replaceRadioButton
             // 
             this.replaceRadioButton.AutoSize = true;
+            this.replaceRadioButton.Checked = true;
             this.replaceRadioButton.Location = new System.Drawing.Point(8, 15);
             this.replaceRadioButton.Name = "replaceRadioButton";
             this.replaceRadioButton.Size = new System.Drawing.Size(73, 17);
             this.replaceRadioButton.TabIndex = 20;
+            this.replaceRadioButton.TabStop = true;
             this.replaceRadioButton.Text = "自动打印";
             this.replaceRadioButton.UseVisualStyleBackColor = true;
             // 
@@ -182,6 +192,87 @@
             this.dataGridView.TabIndex = 18;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
+            // 
+            // CheckColumn1
+            // 
+            this.CheckColumn1.HeaderText = "选择";
+            this.CheckColumn1.Name = "CheckColumn1";
+            this.CheckColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.CheckColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.CheckColumn1.Width = 40;
+            // 
+            // fukuandanwe
+            // 
+            this.fukuandanwe.DataPropertyName = "fukuandanwei";
+            this.fukuandanwe.HeaderText = "付款单位";
+            this.fukuandanwe.Name = "fukuandanwe";
+            // 
+            // weituoren
+            // 
+            this.weituoren.DataPropertyName = "weituoren";
+            this.weituoren.HeaderText = "委托人";
+            this.weituoren.Name = "weituoren";
+            // 
+            // dizhi
+            // 
+            this.dizhi.DataPropertyName = "dizhi";
+            this.dizhi.HeaderText = "地址";
+            this.dizhi.Name = "dizhi";
+            // 
+            // dianhua
+            // 
+            this.dianhua.DataPropertyName = "dianhua";
+            this.dianhua.HeaderText = "电话";
+            this.dianhua.Name = "dianhua";
+            // 
+            // shouji
+            // 
+            this.shouji.DataPropertyName = "shouji";
+            this.shouji.HeaderText = "手机";
+            this.shouji.Name = "shouji";
+            // 
+            // daodaidi2
+            // 
+            this.daodaidi2.DataPropertyName = "daodaidi2";
+            this.daodaidi2.HeaderText = "到达地";
+            this.daodaidi2.Name = "daodaidi2";
+            // 
+            // shouhuoren2
+            // 
+            this.shouhuoren2.DataPropertyName = "shouhuoren2";
+            this.shouhuoren2.HeaderText = "收货人";
+            this.shouhuoren2.Name = "shouhuoren2";
+            // 
+            // dianhua2
+            // 
+            this.dianhua2.DataPropertyName = "dianhua2";
+            this.dianhua2.HeaderText = "收货人电话";
+            this.dianhua2.Name = "dianhua2";
+            // 
+            // editColumn1
+            // 
+            this.editColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2, 12, 2, 12);
+            this.editColumn1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.editColumn1.HeaderText = "";
+            this.editColumn1.Name = "editColumn1";
+            this.editColumn1.Text = "编辑";
+            this.editColumn1.UseColumnTextForButtonValue = true;
+            this.editColumn1.Width = 60;
+            // 
+            // deleteColumn1
+            // 
+            this.deleteColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2, 12, 2, 12);
+            this.deleteColumn1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.deleteColumn1.HeaderText = "";
+            this.deleteColumn1.Name = "deleteColumn1";
+            this.deleteColumn1.Text = "删除";
+            this.deleteColumn1.ToolTipText = "删除";
+            this.deleteColumn1.UseColumnTextForButtonValue = true;
+            this.deleteColumn1.Width = 60;
             // 
             // btdown
             // 
@@ -283,99 +374,6 @@
             this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "开始日期";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(178, 16);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(50, 17);
-            this.checkBox1.TabIndex = 24;
-            this.checkBox1.Text = "标签";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // CheckColumn1
-            // 
-            this.CheckColumn1.HeaderText = "选择";
-            this.CheckColumn1.Name = "CheckColumn1";
-            this.CheckColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.CheckColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.CheckColumn1.Width = 40;
-            // 
-            // fukuandanwe
-            // 
-            this.fukuandanwe.DataPropertyName = "fukuandanwei";
-            this.fukuandanwe.HeaderText = "付款单位";
-            this.fukuandanwe.Name = "fukuandanwe";
-            // 
-            // weituoren
-            // 
-            this.weituoren.DataPropertyName = "weituoren";
-            this.weituoren.HeaderText = "委托人";
-            this.weituoren.Name = "weituoren";
-            // 
-            // dizhi
-            // 
-            this.dizhi.DataPropertyName = "dizhi";
-            this.dizhi.HeaderText = "地址";
-            this.dizhi.Name = "dizhi";
-            // 
-            // dianhua
-            // 
-            this.dianhua.DataPropertyName = "dianhua";
-            this.dianhua.HeaderText = "电话";
-            this.dianhua.Name = "dianhua";
-            // 
-            // shouji
-            // 
-            this.shouji.DataPropertyName = "shouji";
-            this.shouji.HeaderText = "手机";
-            this.shouji.Name = "shouji";
-            // 
-            // daodaidi2
-            // 
-            this.daodaidi2.DataPropertyName = "daodaidi2";
-            this.daodaidi2.HeaderText = "到达地";
-            this.daodaidi2.Name = "daodaidi2";
-            // 
-            // shouhuoren2
-            // 
-            this.shouhuoren2.DataPropertyName = "shouhuoren2";
-            this.shouhuoren2.HeaderText = "收货人";
-            this.shouhuoren2.Name = "shouhuoren2";
-            // 
-            // dianhua2
-            // 
-            this.dianhua2.DataPropertyName = "dianhua2";
-            this.dianhua2.HeaderText = "收货人电话";
-            this.dianhua2.Name = "dianhua2";
-            // 
-            // editColumn1
-            // 
-            this.editColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2, 12, 2, 12);
-            this.editColumn1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.editColumn1.HeaderText = "";
-            this.editColumn1.Name = "editColumn1";
-            this.editColumn1.Text = "编辑";
-            this.editColumn1.UseColumnTextForButtonValue = true;
-            this.editColumn1.Width = 60;
-            // 
-            // deleteColumn1
-            // 
-            this.deleteColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2, 12, 2, 12);
-            this.deleteColumn1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.deleteColumn1.HeaderText = "";
-            this.deleteColumn1.Name = "deleteColumn1";
-            this.deleteColumn1.Text = "删除";
-            this.deleteColumn1.ToolTipText = "删除";
-            this.deleteColumn1.UseColumnTextForButtonValue = true;
-            this.deleteColumn1.Width = 60;
             // 
             // pager1
             // 

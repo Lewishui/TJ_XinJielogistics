@@ -47,17 +47,18 @@
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(782, 449);
+            this.reportViewer1.Size = new System.Drawing.Size(900, 559);
             this.reportViewer1.TabIndex = 0;
             // 
             // frmprint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 449);
+            this.ClientSize = new System.Drawing.Size(900, 559);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmprint";
-            this.Text = "frmprint";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "打印";
             this.Load += new System.EventHandler(this.frmprint_Load);
             ((System.ComponentModel.ISupportInitialize)(this.t_orderdataBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();

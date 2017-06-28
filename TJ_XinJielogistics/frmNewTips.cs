@@ -34,13 +34,13 @@ namespace TJ_XinJielogistics
 
             if (maintype == "Edit")
             {
-               label2.Text = "编辑标签";
+                label2.Text = "编辑标签";
                 this.Text = "编辑标签";
                 ModelId = obj.tip_id;
                 this.titleTextBox.Text = item.yuandanhao;
                 textBox1.Text = item.shifazhan;
                 textBox2.Text = item.mudizhan;
-                textBox3.Text = item.jianshu;
+                numericUpDown1.Text = item.jianshu;
                 this.localTitleTextBox.Text = item.shouhuoren;
                 textBox4.Text = item.dianhua;
 
@@ -49,19 +49,19 @@ namespace TJ_XinJielogistics
 
         private void NewMethod(clsTipsinfo item)
         {
-           // item = new clsTipsinfo();
+            // item = new clsTipsinfo();
 
 
             //1
             item.yuandanhao = this.titleTextBox.Text;
             item.shifazhan = textBox1.Text;
             item.mudizhan = textBox2.Text;
-            item.jianshu = textBox3.Text;
+            item.jianshu = numericUpDown1.Text;
             item.shouhuoren = this.localTitleTextBox.Text;
             item.dianhua = this.textBox4.Text;
             item.Input_Date = DateTime.Now.ToString("yyyyMMdd");
 
-           
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -81,7 +81,7 @@ namespace TJ_XinJielogistics
             this.titleTextBox.Text = "";
             textBox1.Text = "";
             textBox2.Text = "";
-            textBox3.Text = "";
+            numericUpDown1.Text = "";
             textBox4.Text = "";
             this.localTitleTextBox.Text = "";
         }
@@ -218,22 +218,46 @@ namespace TJ_XinJielogistics
             #region 读取信息
             NewMethod(item);
             #endregion
-            if (ModelId != "")
+            save();
+
+        }
+
+        private void save()
+        {
+            if (ModelId != null && ModelId != "")
                 item.tip_id = ModelId;
 
             Result.Add(item);
 
             clsAllnew BusinessHelp = new clsAllnew();
-            if (ModelId == "" || ModelId==null)
+            if (ModelId == "" || ModelId == null)
                 BusinessHelp.create_tipServer(Result);
             else
                 BusinessHelp.update_TipServer(Result);
-
         }
 
         private void cancelButton_Click_1(object sender, EventArgs e)
         {
             this.Close();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            Result = new List<clsTipsinfo>();
+
+            item = new clsTipsinfo();
+
+            #region 读取信息
+            NewMethod(item);
+            #endregion
+            clsAllnew BusinessHelp = new clsAllnew();
+            BusinessHelp.PrintTIP(item, Convert.ToInt32(item.jianshu));
+
+
+
+            save();
 
         }
 

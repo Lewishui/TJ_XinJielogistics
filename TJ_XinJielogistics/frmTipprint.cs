@@ -20,12 +20,15 @@ namespace TJ_XinJielogistics
         public frmTipprint(List<clsTipsinfo> Result1)
         {
             InitializeComponent();
+            InitialSystemInfo();
+            ProcessLogger.Fatal("2009012:print Initial" + DateTime.Now.ToString());
+
             InitializeReportEvent();
 
             Result = new List<clsTipsinfo>();
             Result = Result1;
-            InitialSystemInfo();
-            ProcessLogger.Fatal("print Initial" + DateTime.Now.ToString());
+          
+            ProcessLogger.Fatal("print end" + DateTime.Now.ToString());
 
         }
         private void InitialSystemInfo()
@@ -44,18 +47,19 @@ namespace TJ_XinJielogistics
 
             try
             {
+                ProcessLogger.Fatal("2009312:print load" + DateTime.Now.ToString());
 
                 reportViewer1.LocalReport.ReportPath = Application.StartupPath + "\\Report2.rdlc";
                // reportViewer1.LocalReport.ReportPath = @"C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\Report2.rdlc";
 
-                ProcessLogger.Fatal("109723 load file" + DateTime.Now.ToString());
+                ProcessLogger.Fatal("209723 load file" + DateTime.Now.ToString());
                 //指定数据集,数据集名称后为表,不是DataSet类型的数据集
                 this.reportViewer1.LocalReport.DataSources.Clear();
                 this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet2", Result));
-                ProcessLogger.Fatal("109724 Add file" + DateTime.Now.ToString());
+                ProcessLogger.Fatal("209724 Add file" + DateTime.Now.ToString());
                 //显示报表
                 this.reportViewer1.RefreshReport();
-                ProcessLogger.Fatal("109724 display file" + DateTime.Now.ToString());
+                ProcessLogger.Fatal("209725 display file" + DateTime.Now.ToString());
                 //240×340   一般文件袋
                 //2835  X  1713
 

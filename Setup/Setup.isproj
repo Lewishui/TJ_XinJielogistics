@@ -1,4 +1,4 @@
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
 	<PropertyGroup>
 		<!-- Select a Product Configuration -->
 		<InstallShieldProductConfiguration>Express</InstallShieldProductConfiguration>
@@ -28,9 +28,5 @@
 	</ItemGroup>
 	<Import Project="$(MSBuildExtensionsPath32)\InstallShield\2012SpringLimited\InstallShield.targets"/>
 	<ItemGroup>
-		<ProjectReference Include="..\TJ_XinJielogistics\TJ_XinJielogistics.csproj">
-			<Name>TJ_XinJielogistics</Name>
-			<Project>{280FEEBB-FF68-44FF-B3A8-A02004A7270B}</Project>
-		</ProjectReference>
 	</ItemGroup>
 </Project>

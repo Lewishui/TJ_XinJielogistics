@@ -225,7 +225,7 @@ namespace TJ_XinJielogistics
                 }
                 else
                 {
-                    MessageBox.Show("亲，非管理员不可删除～","删除", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("亲，非管理员不可删除～", "删除", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
                 }
@@ -240,19 +240,24 @@ namespace TJ_XinJielogistics
             {
                 FilterOrderResults = new List<clsTipsinfo>();
                 if (dataGridView.RowCount == 0 || dataGridView.RowCount < RowRemark)
-                    return;
+                {
+                    MessageBox.Show("请选择要打印的单子，谢谢", "打印", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
+                    return;
+                }
                 var row = dataGridView.Rows[RowRemark];
                 var model = row.DataBoundItem as clsTipsinfo;
                 for (int i = 0; i < dataGridView.RowCount; i++)
                 {
                     if ((bool)dataGridView.Rows[i].Cells[0].EditedFormattedValue == true)
                     {
-                        FilterOrderResults = new List<clsTipsinfo>();
+                        //    FilterOrderResults = new List<clsTipsinfo>();
 
                         row = dataGridView.Rows[i];
                         model = row.DataBoundItem as clsTipsinfo;
-                        FilterOrderResults.Add(model);
+                        int jianshutotal = Convert.ToInt32(model.jianshu);
+
+                        //  FilterOrderResults.Add(model);
 
                         if (this.noReplaceRadioButton.Checked == true)
                         {
@@ -266,7 +271,9 @@ namespace TJ_XinJielogistics
                         }
                         else if (this.replaceRadioButton.Checked == true)
                         {
-                            Run();
+                            clsAllnew BusinessHelp = new clsAllnew();
+
+                            BusinessHelp.PrintTIP(model, jianshutotal );
 
                         }
                     }
@@ -281,6 +288,8 @@ namespace TJ_XinJielogistics
                 throw;
             }
         }
+
+
 
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {

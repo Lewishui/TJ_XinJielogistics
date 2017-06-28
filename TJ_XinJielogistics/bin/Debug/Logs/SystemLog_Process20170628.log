@@ -1,0 +1,65 @@
+2017-06-28 08:17:22,796 [9] FATAL ProcessLogger [(null)] - System Start 6/28/2017 08:17:22
+2017-06-28 08:17:22,823 [9] FATAL ProcessLogger [(null)] - login6/28/2017 08:17:22
+2017-06-28 08:17:23,896 [9] FATAL ProcessLogger [(null)] - 07932:System Login Start 6/28/2017 08:17:23
+2017-06-28 08:17:24,147 [9] FATAL ProcessLogger [(null)] - 07933:System Login Start 6/28/2017 08:17:24
+2017-06-28 08:17:24,147 [9] FATAL ProcessLogger [(null)] - 07934:System Login Start 6/28/2017 08:17:24
+2017-06-28 08:17:24,154 [9] FATAL ProcessLogger [(null)] - 07935:System Login Start 6/28/2017 08:17:24
+2017-06-28 08:18:38,341 [9] FATAL ProcessLogger [(null)] - 009012:print strart6/28/2017 08:18:38
+2017-06-28 08:18:38,378 [9] FATAL ProcessLogger [(null)] - 009014:print strart6/28/2017 08:18:38
+2017-06-28 08:18:38,384 [9] FATAL ProcessLogger [(null)] - 009015:print strart6/28/2017 08:18:38
+2017-06-28 08:18:38,654 [9] FATAL ProcessLogger [(null)] - 009016:print strart6/28/2017 08:18:38
+2017-06-28 08:18:38,654 [9] FATAL ProcessLogger [(null)] - 012012:print end6/28/2017 08:18:38
+2017-06-28 08:18:38,669 [9] FATAL ProcessLogger [(null)] - 012100:print dock6/28/2017 08:18:38
+2017-06-28 08:18:38,683 [9] FATAL ProcessLogger [(null)] - 109723 load file6/28/2017 08:18:38
+2017-06-28 08:18:38,685 [9] FATAL ProcessLogger [(null)] - 109724 Add file6/28/2017 08:18:38
+2017-06-28 08:18:39,291 [9] FATAL ProcessLogger [(null)] - 109725 display file6/28/2017 08:18:39
+2017-06-28 08:22:29,721 [8] FATAL ProcessLogger [(null)] - System Start 6/28/2017 08:22:29
+2017-06-28 08:22:29,747 [8] FATAL ProcessLogger [(null)] - login6/28/2017 08:22:29
+2017-06-28 08:22:47,060 [8] FATAL ProcessLogger [(null)] - 07932:System Login Start 6/28/2017 08:22:47
+2017-06-28 08:22:47,254 [8] FATAL ProcessLogger [(null)] - 07933:System Login Start 6/28/2017 08:22:47
+2017-06-28 08:22:47,254 [8] FATAL ProcessLogger [(null)] - 07934:System Login Start 6/28/2017 08:22:47
+2017-06-28 08:22:47,260 [8] FATAL ProcessLogger [(null)] - 07935:System Login Start 6/28/2017 08:22:47
+2017-06-28 08:24:23,063 [9] FATAL ProcessLogger [(null)] - System Start 6/28/2017 08:24:23
+2017-06-28 08:24:23,090 [9] FATAL ProcessLogger [(null)] - login6/28/2017 08:24:23
+2017-06-28 08:24:24,282 [9] FATAL ProcessLogger [(null)] - 07932:System Login Start 6/28/2017 08:24:24
+2017-06-28 08:24:24,492 [9] FATAL ProcessLogger [(null)] - 07933:System Login Start 6/28/2017 08:24:24
+2017-06-28 08:24:24,492 [9] FATAL ProcessLogger [(null)] - 07934:System Login Start 6/28/2017 08:24:24
+2017-06-28 08:24:24,499 [9] FATAL ProcessLogger [(null)] - 07935:System Login Start 6/28/2017 08:24:24
+2017-06-28 08:27:09,223 [10] FATAL ProcessLogger [(null)] - System Start 6/28/2017 08:27:09
+2017-06-28 08:27:09,249 [10] FATAL ProcessLogger [(null)] - login6/28/2017 08:27:09
+2017-06-28 08:27:38,621 [9] FATAL ProcessLogger [(null)] - System Start 6/28/2017 08:27:38
+2017-06-28 08:27:38,647 [9] FATAL ProcessLogger [(null)] - login6/28/2017 08:27:38
+2017-06-28 08:27:54,971 [9] FATAL ProcessLogger [(null)] - 07932:System Login Start 6/28/2017 08:27:54
+2017-06-28 08:27:55,177 [9] FATAL ProcessLogger [(null)] - 07933:System Login Start 6/28/2017 08:27:55
+2017-06-28 08:27:55,178 [9] FATAL ProcessLogger [(null)] - 07934:System Login Start 6/28/2017 08:27:55
+2017-06-28 08:27:55,186 [9] FATAL ProcessLogger [(null)] - 07935:System Login Start 6/28/2017 08:27:55
+2017-06-28 08:42:01,647 [9] FATAL ProcessLogger [(null)] - System Start 6/28/2017 08:42:01
+2017-06-28 08:42:01,677 [9] FATAL ProcessLogger [(null)] - login6/28/2017 08:42:01
+2017-06-28 08:42:03,007 [9] FATAL ProcessLogger [(null)] - 07932:System Login Start 6/28/2017 08:42:03
+2017-06-28 08:42:03,219 [9] FATAL ProcessLogger [(null)] - 07933:System Login Start 6/28/2017 08:42:03
+2017-06-28 08:42:03,219 [9] FATAL ProcessLogger [(null)] - 07934:System Login Start 6/28/2017 08:42:03
+2017-06-28 08:42:03,227 [9] FATAL ProcessLogger [(null)] - 07935:System Login Start 6/28/2017 08:42:03
+2017-06-28 08:43:02,719 [9] FATAL ProcessLogger [(null)] - System Start 6/28/2017 08:43:02
+2017-06-28 08:43:03,077 [9] FATAL ProcessLogger [(null)] - login6/28/2017 08:43:03
+2017-06-28 08:43:04,431 [9] FATAL ProcessLogger [(null)] - 07932:System Login Start 6/28/2017 08:43:04
+2017-06-28 08:43:04,645 [9] FATAL ProcessLogger [(null)] - 07933:System Login Start 6/28/2017 08:43:04
+2017-06-28 08:43:04,645 [9] FATAL ProcessLogger [(null)] - 07934:System Login Start 6/28/2017 08:43:04
+2017-06-28 08:43:04,652 [9] FATAL ProcessLogger [(null)] - 07935:System Login Start 6/28/2017 08:43:04
+2017-06-28 08:49:18,219 [9] FATAL ProcessLogger [(null)] - System Start 6/28/2017 08:49:18
+2017-06-28 08:49:18,489 [9] FATAL ProcessLogger [(null)] - login6/28/2017 08:49:18
+2017-06-28 08:49:19,769 [9] FATAL ProcessLogger [(null)] - 07932:System Login Start 6/28/2017 08:49:19
+2017-06-28 08:49:19,970 [9] FATAL ProcessLogger [(null)] - 07933:System Login Start 6/28/2017 08:49:19
+2017-06-28 08:49:19,970 [9] FATAL ProcessLogger [(null)] - 07934:System Login Start 6/28/2017 08:49:19
+2017-06-28 08:49:19,976 [9] FATAL ProcessLogger [(null)] - 07935:System Login Start 6/28/2017 08:49:19
+2017-06-28 08:50:51,342 [8] FATAL ProcessLogger [(null)] - System Start 6/28/2017 08:50:51
+2017-06-28 08:50:51,370 [8] FATAL ProcessLogger [(null)] - login6/28/2017 08:50:51
+2017-06-28 08:50:55,309 [8] FATAL ProcessLogger [(null)] - 07932:System Login Start 6/28/2017 08:50:55
+2017-06-28 08:50:55,517 [8] FATAL ProcessLogger [(null)] - 07933:System Login Start 6/28/2017 08:50:55
+2017-06-28 08:50:55,517 [8] FATAL ProcessLogger [(null)] - 07934:System Login Start 6/28/2017 08:50:55
+2017-06-28 08:50:55,524 [8] FATAL ProcessLogger [(null)] - 07935:System Login Start 6/28/2017 08:50:55
+2017-06-28 08:52:22,682 [9] FATAL ProcessLogger [(null)] - System Start 6/28/2017 08:52:22
+2017-06-28 08:52:22,715 [9] FATAL ProcessLogger [(null)] - login6/28/2017 08:52:22
+2017-06-28 08:54:17,672 [9] FATAL ProcessLogger [(null)] - 07932:System Login Start 6/28/2017 08:54:17
+2017-06-28 08:54:17,872 [9] FATAL ProcessLogger [(null)] - 07933:System Login Start 6/28/2017 08:54:17
+2017-06-28 08:54:17,872 [9] FATAL ProcessLogger [(null)] - 07934:System Login Start 6/28/2017 08:54:17
+2017-06-28 08:54:24,080 [9] FATAL ProcessLogger [(null)] - 07935:System Login Start 6/28/2017 08:54:24

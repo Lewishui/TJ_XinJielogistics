@@ -63,11 +63,12 @@
             this.一键配置初始化信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.打开本地目录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.打开本地目录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.设置打印机ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -193,7 +194,8 @@
             // toolStripDropDownButton1
             // 
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.导入彩票数据ToolStripMenuItem});
+            this.导入彩票数据ToolStripMenuItem,
+            this.设置打印机ToolStripMenuItem});
             this.toolStripDropDownButton1.Enabled = false;
             this.toolStripDropDownButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -205,7 +207,7 @@
             // 导入彩票数据ToolStripMenuItem
             // 
             this.导入彩票数据ToolStripMenuItem.Name = "导入彩票数据ToolStripMenuItem";
-            this.导入彩票数据ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.导入彩票数据ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
             this.导入彩票数据ToolStripMenuItem.Text = "订单";
             this.导入彩票数据ToolStripMenuItem.Click += new System.EventHandler(this.导入彩票数据ToolStripMenuItem_Click);
             // 
@@ -295,6 +297,13 @@
             this.关于系统ToolStripMenuItem.Text = "关于系统";
             this.关于系统ToolStripMenuItem.Click += new System.EventHandler(this.关于系统ToolStripMenuItem_Click);
             // 
+            // 打开本地目录ToolStripMenuItem
+            // 
+            this.打开本地目录ToolStripMenuItem.Name = "打开本地目录ToolStripMenuItem";
+            this.打开本地目录ToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
+            this.打开本地目录ToolStripMenuItem.Text = "打开本地目录";
+            this.打开本地目录ToolStripMenuItem.Click += new System.EventHandler(this.打开本地目录ToolStripMenuItem_Click);
+            // 
             // notifyIcon1
             // 
             this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
@@ -318,12 +327,12 @@
             this.toolStripMenuItem2.Text = "Exit";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
-            // 打开本地目录ToolStripMenuItem
+            // 设置打印机ToolStripMenuItem
             // 
-            this.打开本地目录ToolStripMenuItem.Name = "打开本地目录ToolStripMenuItem";
-            this.打开本地目录ToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
-            this.打开本地目录ToolStripMenuItem.Text = "打开本地目录";
-            this.打开本地目录ToolStripMenuItem.Click += new System.EventHandler(this.打开本地目录ToolStripMenuItem_Click);
+            this.设置打印机ToolStripMenuItem.Name = "设置打印机ToolStripMenuItem";
+            this.设置打印机ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.设置打印机ToolStripMenuItem.Text = "设置打印机";
+            this.设置打印机ToolStripMenuItem.Click += new System.EventHandler(this.设置打印机ToolStripMenuItem_Click);
             // 
             // frmlogin
             // 
@@ -370,6 +379,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem 打开本地目录ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 设置打印机ToolStripMenuItem;
     }
 }
 

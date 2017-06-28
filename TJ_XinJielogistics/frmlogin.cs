@@ -375,7 +375,7 @@ namespace TJ_XinJielogistics
                 string endday = DateTime.Now.ToString("yyyy/MM/dd");
                 dt3 = Convert.ToDateTime(endday);
                 DateTime dt2;
-                dt2 = Convert.ToDateTime("2017/06/18");
+                dt2 = Convert.ToDateTime("2017/07/23");
 
                 TimeSpan ts = dt2 - dt3;
                 int timeTotal = ts.Days;
@@ -619,6 +619,17 @@ namespace TJ_XinJielogistics
         {
             string ZFCEPath = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "System"), "");
             System.Diagnostics.Process.Start("explorer.exe", ZFCEPath);
+        }
+
+        private void 设置打印机ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            var form = new frmSetPrint( );
+
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
 
     }
