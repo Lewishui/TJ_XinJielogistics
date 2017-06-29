@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Drawing.Imaging;
 using System.Drawing.Printing;
 using System.IO;
@@ -1578,6 +1579,9 @@ namespace TJ.Buiness
             //   new ReportDataSource("Sales", FilterOrderResults));
             report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", FilterOrderResults));
 
+    
+
+
             Export(report);
             m_currentPageIndex = 0;
 
@@ -1625,8 +1629,8 @@ namespace TJ.Buiness
             string deviceInfo =
         "<DeviceInfo>" +
         "  <OutputFormat>EMF</OutputFormat>" +
-        "  <PageWidth>10cm</PageWidth>" +
-        "  <PageHeight>10cm</PageHeight>" +
+        "  <PageWidth>11cm</PageWidth>" +
+        "  <PageHeight>11cm</PageHeight>" +
         "  <MarginTop>0.1cm</MarginTop>" +
         "  <MarginLeft>0.1cm</MarginLeft>" +
         "  <MarginRight>0.1cm</MarginRight>" +
@@ -1706,6 +1710,19 @@ namespace TJ.Buiness
             Metafile pageImage = new
                Metafile(m_streams[m_currentPageIndex]);
             //ev.PageSettings.Landscape = true;
+           //
+            StringFormat SF = new StringFormat();
+            SF.LineAlignment = StringAlignment.Center;
+            SF.Alignment = StringAlignment.Center;
+            //RectangleF rect = new RectangleF(0, 0, ev.PageBounds.Width, ev.Graphics.MeasureString("Authors Informations", new Font("Times New Roman", 20)).Height);    //其中e.PageBounds属性表示页面全部区域的矩形区域
+            //ev.Graphics.MeasureString(string,Font).Heighte.Graphics.DrawString("Authors Informations",new Font("Times New Roman",20),Brushes.Black,rect,SF);
+            float left = ev.PageSettings.Margins.Left;//打印区域的左边界
+            float top = ev.PageSettings.Margins.Top;//打印区域的上边界
+            float width = ev.PageSettings.PaperSize.Width - left - ev.PageSettings.Margins.Right;//计算出有效打印区域的宽度
+            float height = ev.PageSettings.PaperSize.Height - top - ev.PageSettings.Margins.Bottom;//计算出有效打印区域的高度
+
+           
+            ////
             ev.Graphics.DrawImage(pageImage, ev.PageBounds);
             m_currentPageIndex++;
             ev.HasMorePages = (m_currentPageIndex < m_streams.Count);
@@ -1739,7 +1756,7 @@ namespace TJ.Buiness
             string deviceInfo =
         "<DeviceInfo>" +
         "  <OutputFormat>EMF</OutputFormat>" +
-        "  <PageWidth>24cm</PageWidth>" +
+        "  <PageWidth>26cm</PageWidth>" +
         "  <PageHeight>15.2cm</PageHeight>" +
         "  <MarginTop>0.1cm</MarginTop>" +
         "  <MarginLeft>0.1cm</MarginLeft>" +
