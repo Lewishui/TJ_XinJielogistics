@@ -1,3 +1,4 @@
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\Log4Net.config
 C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\TJ_XinJielogistics.exe.config
 C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\TJ_XinJielogistics.exe
 C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\TJ_XinJielogistics.pdb
@@ -25,6 +26,7 @@ C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJi
 C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\obj\Debug\TJ_XinJielogistics.frmNewOrder.resources
 C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\obj\Debug\TJ_XinJielogistics.frmOrder.resources
 C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\obj\Debug\TJ_XinJielogistics.frmprint.resources
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\obj\Debug\TJ_XinJielogistics.frmSetPrint.resources
 C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\obj\Debug\TJ_XinJielogistics.frmUserManger.resources
 C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\obj\Debug\TJ_XinJielogistics.frmViewUser.resources
 C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\obj\Debug\TJ_XinJielogistics.frmWrokflow.resources
@@ -38,5 +40,3 @@ C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJi
 C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\obj\Debug\RdlCompile.compiled
 C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\obj\Debug\TJ_XinJielogistics.exe
 C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\obj\Debug\TJ_XinJielogistics.pdb
-C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\Log4Net.config
-C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\obj\Debug\TJ_XinJielogistics.frmSetPrint.resources

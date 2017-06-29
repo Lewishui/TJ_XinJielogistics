@@ -242,6 +242,27 @@ namespace TJ_XinJielogistics
 
                 return;
             }
+            else
+            {
+                int ishaveprint = 0;
+
+                for (int i = 0; i < dataGridView.RowCount; i++)
+                {
+                    if ((bool)dataGridView.Rows[i].Cells[0].EditedFormattedValue == true)
+                    {
+                        ishaveprint++;
+
+                    }
+                   
+                }
+                if (ishaveprint == 0)
+                {
+                    MessageBox.Show("请选择要打印的单子，谢谢", "打印", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    return;
+                }
+
+            }
             clsAllnew BusinessHelp = new clsAllnew();
 
             FilterOrderResults = new List<clsOrderDatabaseinfo>();

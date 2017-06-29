@@ -37,14 +37,14 @@ namespace TJ_XinJielogistics
             InitialSystemInfo();
 
             ProcessLogger.Fatal("009012:print strart" + DateTime.Now.ToString());
-           
+
             InitializeReportEvent();
 
             Result = new List<clsOrderDatabaseinfo>();
             Result = Result1;
             ProcessLogger.Fatal("012012:print end" + DateTime.Now.ToString());
-          
-           
+
+
             //   reportViewer1.PrintDialog();
         }
         private void InitialSystemInfo()
@@ -64,9 +64,9 @@ namespace TJ_XinJielogistics
             try
             {
                 ProcessLogger.Fatal("012100:print dock" + DateTime.Now.ToString());
-          
+
                 reportViewer1.LocalReport.ReportPath = Application.StartupPath + "\\Report1.rdlc";
-              //  reportViewer1.LocalReport.ReportPath = @"C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\Report1.rdlc";
+                //  reportViewer1.LocalReport.ReportPath = @"C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\Report1.rdlc";
 
                 ProcessLogger.Fatal("109723 load file" + DateTime.Now.ToString());
                 //指定数据集,数据集名称后为表,不是DataSet类型的数据集
@@ -79,7 +79,7 @@ namespace TJ_XinJielogistics
                 //240×340   一般文件袋
                 //2835  X  1713
 
-              //  this.reportViewer1.RenderingComplete += new RenderingCompleteEventHandler(PrintLabelDirectly);
+                //  this.reportViewer1.RenderingComplete += new RenderingCompleteEventHandler(PrintLabelDirectly);
 
             }
             catch (Exception ex)
@@ -96,7 +96,7 @@ namespace TJ_XinJielogistics
             //this.reportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_SubreportProcessing);
             this.reportViewer1.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout);
             ProcessLogger.Fatal("009014:print strart" + DateTime.Now.ToString());
-           
+
             this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.Percent;
             this.reportViewer1.ZoomPercent = 100;
 
@@ -104,12 +104,11 @@ namespace TJ_XinJielogistics
             //this.reportViewer1.Width = 29;
             //this.reportViewer1.Height = 21;
             PageSettings pageset = new PageSettings();
-            pageset.Landscape = true;
-            //var pageSettings = this.reportViewer1.GetPageSettings();
+            // var pageset = this.reportViewer1.GetPageSettings();
             pageset.PaperSize = new PaperSize()
             {
-                //Width = 210,
-                //Height = 297
+                //Width = 240,
+                //   Height = 152
                 //
                 Width = 827,
                 Height = 1169
@@ -119,12 +118,13 @@ namespace TJ_XinJielogistics
                 //Height = 240
             };
             ProcessLogger.Fatal("009015:print strart" + DateTime.Now.ToString());
-          
+            pageset.Landscape = true;
+
             pageset.Margins = new Margins() { Left = 10, Top = 10, Bottom = 10, Right = 10 };
 
             reportViewer1.SetPageSettings(pageset);
             ProcessLogger.Fatal("009016:print strart" + DateTime.Now.ToString());
-          
+
         }
         public void PrintLabelDirectly(object sender, RenderingCompleteEventArgs e)
         {

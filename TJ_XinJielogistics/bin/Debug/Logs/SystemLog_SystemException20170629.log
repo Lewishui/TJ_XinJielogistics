@@ -1,0 +1,20 @@
+2017-06-29 10:11:41,454 [9] FATAL SystemExceptionLogger [(null)] - System Error A generic error occurred in GDI+., Exception Detail Info :   at System.Drawing.Imaging.Metafile..ctor(Stream stream)
+   at TJ.Buiness.clsAllnew.PrintPage(Object sender, PrintPageEventArgs ev) in c:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\clsAllnew.cs:line 1706
+   at System.Drawing.Printing.PrintDocument.OnPrintPage(PrintPageEventArgs e)
+   at System.Drawing.Printing.PrintDocument._OnPrintPage(PrintPageEventArgs e)
+   at System.Drawing.Printing.PrintController.PrintLoop(PrintDocument document)
+   at System.Drawing.Printing.PrintController.Print(PrintDocument document)
+   at System.Drawing.Printing.PrintDocument.Print()
+   at TJ.Buiness.clsAllnew.Print(String defaultPrinterName, Int32 lenpage, Int32 withpage) in c:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\clsAllnew.cs:line 1687
+   at TJ.Buiness.clsAllnew.Run(List`1 FilterOrderResults) in c:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\clsAllnew.cs:line 1584
+   at TJ_XinJielogistics.frmOrder.button1_Click(Object sender, EventArgs e) in c:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\frmOrder.cs:line 292
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)Time6/29/2017 10:11:41

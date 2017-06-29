@@ -1577,11 +1577,11 @@ namespace TJ.Buiness
             //report.DataSources.Add(
             //   new ReportDataSource("Sales", FilterOrderResults));
             report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", FilterOrderResults));
-           
+
             Export(report);
             m_currentPageIndex = 0;
 
-            Print(orderprint);
+            Print(orderprint, 944, 598);
         }
         public void Run2(List<clsTipsinfo> FilterOrderResults)
         {
@@ -1594,7 +1594,7 @@ namespace TJ.Buiness
 
             Export2(report);
             m_currentPageIndex = 0;
-            Print(tisprint);
+            Print(tisprint, 393, 393);
         }
         private void Export2(LocalReport report)
         {
@@ -1611,16 +1611,38 @@ namespace TJ.Buiness
             //  "  <MarginBottom>0.25in</MarginBottom>" +
             //  "</DeviceInfo>";
 
+            //string deviceInfo =
+            //"<DeviceInfo>" +
+            //"  <OutputFormat>EMF</OutputFormat>" +
+            //"  <PageWidth>18.9in</PageWidth>" +
+            //"  <PageHeight>11.42in</PageHeight>" +
+            //"  <MarginTop>0.25in</MarginTop>" +
+            //"  <MarginLeft>0.25in</MarginLeft>" +
+            //"  <MarginRight>0.25in</MarginRight>" +
+            //"  <MarginBottom>0.25in</MarginBottom>" +
+            //"</DeviceInfo>";
+
             string deviceInfo =
-            "<DeviceInfo>" +
-            "  <OutputFormat>EMF</OutputFormat>" +
-            "  <PageWidth>18.9in</PageWidth>" +
-            "  <PageHeight>11.42in</PageHeight>" +
-            "  <MarginTop>0.25in</MarginTop>" +
-            "  <MarginLeft>0.25in</MarginLeft>" +
-            "  <MarginRight>0.25in</MarginRight>" +
-            "  <MarginBottom>0.25in</MarginBottom>" +
-            "</DeviceInfo>";
+        "<DeviceInfo>" +
+        "  <OutputFormat>EMF</OutputFormat>" +
+        "  <PageWidth>10cm</PageWidth>" +
+        "  <PageHeight>10cm</PageHeight>" +
+        "  <MarginTop>0.1cm</MarginTop>" +
+        "  <MarginLeft>0.1cm</MarginLeft>" +
+        "  <MarginRight>0.1cm</MarginRight>" +
+        "  <MarginBottom>0.1cm</MarginBottom>" +
+        "</DeviceInfo>";
+
+       //     string deviceInfo =
+       //"<DeviceInfo>" +
+       //"  <OutputFormat>EMF</OutputFormat>" +
+       //"  <PageWidth>39.3in</PageWidth>" +
+       //"  <PageHeight>39.3in</PageHeight>" +
+       //"  <MarginTop>0.4in</MarginTop>" +
+       //"  <MarginLeft>0.4in</MarginLeft>" +
+       //"  <MarginRight>0.4in</MarginRight>" +
+       //"  <MarginBottom>0.4in</MarginBottom>" +
+       //"</DeviceInfo>";
             Warning[] warnings;
             m_streams = new List<Stream>();
             report.Render("Image", deviceInfo, CreateStream,
@@ -1628,17 +1650,12 @@ namespace TJ.Buiness
             foreach (Stream stream in m_streams)
                 stream.Position = 0;
         }
-        public void Print(string defaultPrinterName)
+        public void Print(string defaultPrinterName, int lenpage, int withpage)
         {
 
             m_currentPageIndex = 0;
-
-
-
             if (m_streams == null || m_streams.Count == 0)
-
                 return;
-
             //声明PrintDocument对象用于数据的打印
 
             PrintDocument printDoc = new PrintDocument();
@@ -1654,19 +1671,19 @@ namespace TJ.Buiness
 
             if (!printDoc.PrinterSettings.IsValid)
             {
-
                 MessageBox.Show("Can't find printer");
-
                 return;
-
             }
-
             //声明PrintDocument对象的PrintPage事件，具体的打印操作需要在这个事件中处理。
 
-            printDoc.PrintPage += new PrintPageEventHandler(PrintPage);
+           printDoc.PrintPage += new PrintPageEventHandler(PrintPage);
 
             //执行打印操作，Print方法将触发PrintPage事件。
-            printDoc.DefaultPageSettings.Landscape = true;
+            printDoc.DefaultPageSettings.Landscape = false;
+            //大小
+            printDoc.DefaultPageSettings.PaperSize = new PaperSize("Custom", lenpage, withpage);
+
+
             printDoc.Print();
 
         }
@@ -1708,16 +1725,29 @@ namespace TJ.Buiness
             //  "  <MarginBottom>0.25in</MarginBottom>" +
             //  "</DeviceInfo>";
 
+            //string deviceInfo =
+            //"<DeviceInfo>" +
+            //"  <OutputFormat>EMF</OutputFormat>" +
+            //"  <PageWidth>18.9in</PageWidth>" +
+            //"  <PageHeight>11.42in</PageHeight>" +
+            //"  <MarginTop>0.25in</MarginTop>" +
+            //"  <MarginLeft>0.25in</MarginLeft>" +
+            //"  <MarginRight>0.25in</MarginRight>" +
+            //"  <MarginBottom>0.25in</MarginBottom>" +
+            //"</DeviceInfo>";
+
             string deviceInfo =
-            "<DeviceInfo>" +
-            "  <OutputFormat>EMF</OutputFormat>" +
-            "  <PageWidth>18.9in</PageWidth>" +
-            "  <PageHeight>11.42in</PageHeight>" +
-            "  <MarginTop>0.25in</MarginTop>" +
-            "  <MarginLeft>0.25in</MarginLeft>" +
-            "  <MarginRight>0.25in</MarginRight>" +
-            "  <MarginBottom>0.25in</MarginBottom>" +
-            "</DeviceInfo>";
+        "<DeviceInfo>" +
+        "  <OutputFormat>EMF</OutputFormat>" +
+        "  <PageWidth>24cm</PageWidth>" +
+        "  <PageHeight>15.2cm</PageHeight>" +
+        "  <MarginTop>0.1cm</MarginTop>" +
+        "  <MarginLeft>0.1cm</MarginLeft>" +
+        "  <MarginRight>0.1cm</MarginRight>" +
+        "  <MarginBottom>0.1cm</MarginBottom>" +
+        "</DeviceInfo>";
+
+
             Warning[] warnings;
             m_streams = new List<Stream>();
             report.Render("Image", deviceInfo, CreateStream,

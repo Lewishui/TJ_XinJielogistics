@@ -245,6 +245,24 @@ namespace TJ_XinJielogistics
 
                     return;
                 }
+                else
+                {
+                    int ishaveprint = 0;
+                    for (int i = 0; i < dataGridView.RowCount; i++)
+                    {
+                        if ((bool)dataGridView.Rows[i].Cells[0].EditedFormattedValue == true)
+                        {
+                            ishaveprint++;
+                        }
+                    }
+                    if (ishaveprint == 0)
+                    {
+                        MessageBox.Show("请选择要打印的单子，谢谢", "打印", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+
+
                 var row = dataGridView.Rows[RowRemark];
                 var model = row.DataBoundItem as clsTipsinfo;
                 for (int i = 0; i < dataGridView.RowCount; i++)
@@ -257,10 +275,11 @@ namespace TJ_XinJielogistics
                         model = row.DataBoundItem as clsTipsinfo;
                         int jianshutotal = Convert.ToInt32(model.jianshu);
 
-                        //  FilterOrderResults.Add(model);
-
+                        //
                         if (this.noReplaceRadioButton.Checked == true)
                         {
+                            FilterOrderResults.Add(model);
+
                             var form = new frmTipprint(FilterOrderResults);
 
                             if (form.ShowDialog() == DialogResult.OK)
@@ -273,7 +292,7 @@ namespace TJ_XinJielogistics
                         {
                             clsAllnew BusinessHelp = new clsAllnew();
 
-                            BusinessHelp.PrintTIP(model, jianshutotal );
+                            BusinessHelp.PrintTIP(model, jianshutotal);
 
                         }
                     }
