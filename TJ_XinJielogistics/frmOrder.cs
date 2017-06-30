@@ -289,8 +289,8 @@ namespace TJ_XinJielogistics
                     else if (this.replaceRadioButton.Checked == true)
                     {
 
-                        BusinessHelp.Run(FilterOrderResults);
-
+                       BusinessHelp.Run(FilterOrderResults);
+                       
 
                     }
                     if (this.checkBox1.Checked == true)
@@ -423,6 +423,80 @@ namespace TJ_XinJielogistics
                 MessageBox.Show("Dear User, Down File  Successful ！", "System", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (dataGridView.RowCount == 0 || dataGridView.RowCount < RowRemark)
+            {
+                MessageBox.Show("请选择要打印的单子，谢谢", "打印", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return;
+            }
+            else
+            {
+                int ishaveprint = 0;
+
+                for (int i = 0; i < dataGridView.RowCount; i++)
+                {
+                    if ((bool)dataGridView.Rows[i].Cells[0].EditedFormattedValue == true)
+                    {
+                        ishaveprint++;
+
+                    }
+
+                }
+                if (ishaveprint == 0)
+                {
+                    MessageBox.Show("请选择要打印的单子，谢谢", "打印", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    return;
+                }
+
+            }
+            clsAllnew BusinessHelp = new clsAllnew();
+
+            FilterOrderResults = new List<clsOrderDatabaseinfo>();
+
+            var row = dataGridView.Rows[RowRemark];
+            var model = row.DataBoundItem as clsOrderDatabaseinfo;
+            for (int i = 0; i < dataGridView.RowCount; i++)
+            {
+                if ((bool)dataGridView.Rows[i].Cells[0].EditedFormattedValue == true)
+                {
+                    FilterOrderResults = new List<clsOrderDatabaseinfo>();
+
+                    row = dataGridView.Rows[i];
+                    model = row.DataBoundItem as clsOrderDatabaseinfo;
+                    FilterOrderResults.Add(model);
+                    if (this.noReplaceRadioButton.Checked == true)
+                    {
+                        var form = new frmprint(FilterOrderResults);
+                        if (form.ShowDialog() == DialogResult.OK)
+                        {
+
+                        }
+                    }
+                    else if (this.replaceRadioButton.Checked == true)
+                    {
+
+                        //BusinessHelp.Run(FilterOrderResults);
+                        BusinessHelp.DownLoadExcelfile(FilterOrderResults);
+
+                    }
+                    if (this.checkBox1.Checked == true)
+                    {
+                        BusinessHelp.Excelprint_tip( FilterOrderResults);
+
+
+
+                    }
+                }
+            }
+            if (this.replaceRadioButton.Checked == true)
+                MessageBox.Show("打印完成，请核对打印信息，谢谢", "打印", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            return;
         }
 
     }

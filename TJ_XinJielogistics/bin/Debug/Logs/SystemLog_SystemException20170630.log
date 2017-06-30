@@ -1,0 +1,12 @@
+2017-06-30 22:31:03,389 [8] FATAL SystemExceptionLogger [(null)] - System Error Exception from HRESULT: 0x800A03EC, Exception Detail Info :   at TJ.Buiness.clsAllnew.DownLoadExcelfile(List`1 FilterOrderResults) in c:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Buiness\clsAllnew.cs:line 1944
+   at TJ_XinJielogistics.frmOrder.button2_Click(Object sender, EventArgs e) in c:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\frmOrder.cs:line 484
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)Time6/30/2017 22:31:03

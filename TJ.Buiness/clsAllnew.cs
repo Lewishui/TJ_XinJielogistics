@@ -14,6 +14,9 @@ using MongoDB.Driver;
 using MongoDB.Driver.Builders;
 using TJ.Common;
 using TJ.DB;
+//using excelpace = Microsoft.Office.Interop.Excel;
+//using Microsoft.Office.Interop.Excel;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace TJ.Buiness
 {
@@ -1571,6 +1574,9 @@ namespace TJ.Buiness
         #region 标签打印
         public void Run(List<clsOrderDatabaseinfo> FilterOrderResults)
         {
+
+
+
             LocalReport report = new LocalReport();
             //report.ReportPath = @"C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\Report1.rdlc";
             report.ReportPath = Application.StartupPath + "\\Report1.rdlc";
@@ -1578,10 +1584,7 @@ namespace TJ.Buiness
             //report.DataSources.Add(
             //   new ReportDataSource("Sales", FilterOrderResults));
             report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", FilterOrderResults));
-
-    
-
-
+            
             Export(report);
             m_currentPageIndex = 0;
 
@@ -1637,16 +1640,16 @@ namespace TJ.Buiness
         "  <MarginBottom>0.1cm</MarginBottom>" +
         "</DeviceInfo>";
 
-       //     string deviceInfo =
-       //"<DeviceInfo>" +
-       //"  <OutputFormat>EMF</OutputFormat>" +
-       //"  <PageWidth>39.3in</PageWidth>" +
-       //"  <PageHeight>39.3in</PageHeight>" +
-       //"  <MarginTop>0.4in</MarginTop>" +
-       //"  <MarginLeft>0.4in</MarginLeft>" +
-       //"  <MarginRight>0.4in</MarginRight>" +
-       //"  <MarginBottom>0.4in</MarginBottom>" +
-       //"</DeviceInfo>";
+            //     string deviceInfo =
+            //"<DeviceInfo>" +
+            //"  <OutputFormat>EMF</OutputFormat>" +
+            //"  <PageWidth>39.3in</PageWidth>" +
+            //"  <PageHeight>39.3in</PageHeight>" +
+            //"  <MarginTop>0.4in</MarginTop>" +
+            //"  <MarginLeft>0.4in</MarginLeft>" +
+            //"  <MarginRight>0.4in</MarginRight>" +
+            //"  <MarginBottom>0.4in</MarginBottom>" +
+            //"</DeviceInfo>";
             Warning[] warnings;
             m_streams = new List<Stream>();
             report.Render("Image", deviceInfo, CreateStream,
@@ -1680,7 +1683,7 @@ namespace TJ.Buiness
             }
             //声明PrintDocument对象的PrintPage事件，具体的打印操作需要在这个事件中处理。
 
-           printDoc.PrintPage += new PrintPageEventHandler(PrintPage);
+            printDoc.PrintPage += new PrintPageEventHandler(PrintPage);
 
             //执行打印操作，Print方法将触发PrintPage事件。
             printDoc.DefaultPageSettings.Landscape = false;
@@ -1710,7 +1713,7 @@ namespace TJ.Buiness
             Metafile pageImage = new
                Metafile(m_streams[m_currentPageIndex]);
             //ev.PageSettings.Landscape = true;
-           //
+            //
             StringFormat SF = new StringFormat();
             SF.LineAlignment = StringAlignment.Center;
             SF.Alignment = StringAlignment.Center;
@@ -1721,7 +1724,7 @@ namespace TJ.Buiness
             float width = ev.PageSettings.PaperSize.Width - left - ev.PageSettings.Margins.Right;//计算出有效打印区域的宽度
             float height = ev.PageSettings.PaperSize.Height - top - ev.PageSettings.Margins.Bottom;//计算出有效打印区域的高度
 
-           
+
             ////
             ev.Graphics.DrawImage(pageImage, ev.PageBounds);
             m_currentPageIndex++;
@@ -1740,18 +1743,7 @@ namespace TJ.Buiness
             //  "  <MarginLeft>0.25in</MarginLeft>" +
             //  "  <MarginRight>0.25in</MarginRight>" +
             //  "  <MarginBottom>0.25in</MarginBottom>" +
-            //  "</DeviceInfo>";
-
-            //string deviceInfo =
-            //"<DeviceInfo>" +
-            //"  <OutputFormat>EMF</OutputFormat>" +
-            //"  <PageWidth>18.9in</PageWidth>" +
-            //"  <PageHeight>11.42in</PageHeight>" +
-            //"  <MarginTop>0.25in</MarginTop>" +
-            //"  <MarginLeft>0.25in</MarginLeft>" +
-            //"  <MarginRight>0.25in</MarginRight>" +
-            //"  <MarginBottom>0.25in</MarginBottom>" +
-            //"</DeviceInfo>";
+            //  "</DeviceInfo>";       
 
             string deviceInfo =
         "<DeviceInfo>" +
@@ -1799,6 +1791,269 @@ namespace TJ.Buiness
             }
         }
 
+
+        #region MyRegion
+
+        public string DownLoadExcelfile(List<clsOrderDatabaseinfo> FilterOrderResults)
+        {
+
+            #region 获取模板路径
+
+            string fullPath = AppDomain.CurrentDomain.BaseDirectory + "System\\order.xlsx";
+            SaveFileDialog sfdDownFile = new SaveFileDialog();
+            sfdDownFile.OverwritePrompt = false;
+            string DesktopPath = Convert.ToString(System.Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
+            sfdDownFile.Filter = "Excel files (*.xls,*.xlsx)|*.xls;*.xlsx";
+
+            string fileinfo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\");
+            sfdDownFile.FileName = Path.Combine(fileinfo, "Cross check Single" + "_" + DateTime.Now.ToString("yyyyMMdd_mmss") + ".xlsx");
+            string strExcelFileName = string.Empty;
+            string ResaveName = AppDomain.CurrentDomain.BaseDirectory + "Resources\\" + "Cross check Single" + "_" + DateTime.Now.ToString("yyyyMMdd_mmss") + ".xlsx";
+
+            #endregion
+            #region 导出前校验模板信息
+            if (string.IsNullOrEmpty(sfdDownFile.FileName))
+            {
+                MessageBox.Show("File name can't be empty, please Check, thanks!");
+                return "";
+            }
+            if (!File.Exists(fullPath))
+            {
+                MessageBox.Show("Template file does not exist, please Check, thanks!");
+                return "";
+            }
+            else
+            {
+                strExcelFileName = sfdDownFile.FileName;
+            }
+            #endregion
+
+
+            System.Globalization.CultureInfo CurrentCI = System.Threading.Thread.CurrentThread.CurrentCulture;
+            System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
+
+            Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel.Workbook ExcelBook = ExcelApp.Workbooks.Open(fullPath, Type.Missing, false, Type.Missing,
+                "htc", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+            try
+            {
+                Microsoft.Office.Interop.Excel.Worksheet WS = (Microsoft.Office.Interop.Excel.Worksheet)ExcelBook.Worksheets[1];
+                Microsoft.Office.Interop.Excel.Range rng;
+                rng = WS.get_Range(WS.Cells[2, 1], WS.Cells[WS.UsedRange.Rows.Count, 30]);
+                int rowCount = WS.UsedRange.Rows.Count - 1;
+                object[,] o = new object[1, 1];
+                o = (object[,])rng.Value2;
+
+                WS.Cells[3, 2] = FilterOrderResults[0].fukuandanwei;
+                WS.Cells[4, 2] = FilterOrderResults[0].weituoren;
+                WS.Cells[5, 2] = FilterOrderResults[0].dizhi;
+                WS.Cells[7, 2] = FilterOrderResults[0].dianhua;
+                WS.Cells[8, 2] = FilterOrderResults[0].shouji;
+                WS.Cells[9, 2] = FilterOrderResults[0].zhongyaotishi3;
+                WS.Cells[12, 2] = FilterOrderResults[0].quhuoren3;
+                WS.Cells[12, 3] = FilterOrderResults[0].quhuoren_riqi3;
+                WS.Cells[13, 2] = FilterOrderResults[0].weituoren3;
+                WS.Cells[13, 3] = FilterOrderResults[0].weituoren_riqi3;
+                //
+
+                WS.Cells[5, 7] = FilterOrderResults[0].daodaidi2;
+                if (FilterOrderResults[0].jiesuanfangshi2 != null && FilterOrderResults[0].jiesuanfangshi2 == "月结")
+                    WS.Cells[5, 10] = "X";
+                else if (FilterOrderResults[0].jiesuanfangshi2 != null && FilterOrderResults[0].jiesuanfangshi2 == "现结")
+                    WS.Cells[5, 12] = "X";
+                else if (FilterOrderResults[0].jiesuanfangshi2 != null && FilterOrderResults[0].jiesuanfangshi2 == "到付")
+                    WS.Cells[5, 14] = "X";
+
+                WS.Cells[7, 7] = FilterOrderResults[0].danwei2;
+                WS.Cells[8, 7] = FilterOrderResults[0].dizhi2;
+                //WS.Cells[11, 7] = FilterOrderResults[0].dianhua2;
+                //WS.Cells[11, 8] = FilterOrderResults[0].shouji2;
+                WS.Cells[11, 7] = FilterOrderResults[0].huowupinming2;
+
+                WS.Cells[11, 10] = FilterOrderResults[0].shijijianshu2;
+                WS.Cells[12, 7] = FilterOrderResults[0].shijizhongliang2;
+
+                WS.Cells[12, 10] = FilterOrderResults[0].tijizhongliang2;
+
+                WS.Cells[13, 7] = FilterOrderResults[0].baoxianjin2;
+
+                WS.Cells[13, 10] = FilterOrderResults[0].baoxianfei2;
+
+                WS.Cells[14, 7] = FilterOrderResults[0].daishouzafei2;
+
+                WS.Cells[14, 10] = FilterOrderResults[0].daofukuan2;
+
+                WS.Cells[4, 16] = FilterOrderResults[0].kongyun4;
+                WS.Cells[5, 16] = FilterOrderResults[0].luyun4;
+
+                WS.Cells[6, 16] = FilterOrderResults[0].fahuoshijian4.Substring(0, 4);
+                WS.Cells[6, 18] = FilterOrderResults[0].fahuoshijian4.Substring(3, 2);
+                WS.Cells[6, 20] = FilterOrderResults[0].fahuoshijian4.Substring(6, 2);
+
+                WS.Cells[9, 15] = FilterOrderResults[0].chicunjizhongliang5;
+                WS.Cells[11, 16] = FilterOrderResults[0].pansongwanglu5;
+                WS.Cells[12, 16] = FilterOrderResults[0].sijixingming5;
+                WS.Cells[13, 16] = FilterOrderResults[0].chepaihao5;
+                WS.Cells[14, 16] = FilterOrderResults[0].yewuyuan5;
+                WS.Cells[15, 16] = FilterOrderResults[0].qianshouren5;
+
+                Excel.Range excelRange = WS.get_Range(WS.Cells[26, 1], WS.Cells[26, 24]);
+                excelRange.RowHeight = 53;
+                excelRange = WS.get_Range(WS.Cells[23, 1], WS.Cells[23, 24]);
+                excelRange.RowHeight = 49;
+                excelRange = WS.get_Range(WS.Cells[25, 1], WS.Cells[25, 24]);
+                excelRange.RowHeight = 10;
+                ExcelApp.ActiveWindow.View = Excel.XlWindowView.xlPageBreakPreview;
+
+                //ExcelApp.Visible = true;
+                //ExcelApp.ScreenUpdating = true;
+
+                //   WS.PageSetup.PaperSize = Excel.XlPaperSize.xlPaperB5;//纸张大小
+                //WS.PageSetup.Orientation = Excel.XlPageOrientation.xlLandscape;
+                WS.PageSetup.CenterHorizontally = true;
+                string defaultPrinter = ExcelApp.ActivePrinter;
+                Externs.SetDefaultPrinter(orderprint);
+
+
+                //  ExcelApp.ActivePrinter = orderprint;
+
+                WS.PrintOutEx();
+
+                Externs.SetDefaultPrinter(defaultPrinter);
+                clsCommHelp.CloseExcel(ExcelApp, ExcelBook);
+
+                return ResaveName;
+            }
+            catch (Exception ex)
+            {
+                ExcelApp.DisplayAlerts = false;
+                ExcelApp.Quit();
+                ExcelBook = null;
+                ExcelApp = null;
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+                throw ex;
+            }
+
+        }
+        public string Excelprint_tip(List<clsOrderDatabaseinfo> FilterOrderResults)
+        {
+
+            #region 获取模板路径
+
+            string fullPath = AppDomain.CurrentDomain.BaseDirectory + "System\\order.xlsx";
+            SaveFileDialog sfdDownFile = new SaveFileDialog();
+            sfdDownFile.OverwritePrompt = false;
+            string DesktopPath = Convert.ToString(System.Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
+            sfdDownFile.Filter = "Excel files (*.xls,*.xlsx)|*.xls;*.xlsx";
+
+            string fileinfo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\");
+            sfdDownFile.FileName = Path.Combine(fileinfo, "Cross check Single" + "_" + DateTime.Now.ToString("yyyyMMdd_mmss") + ".xlsx");
+            string strExcelFileName = string.Empty;
+            string ResaveName = AppDomain.CurrentDomain.BaseDirectory + "Resources\\" + "Cross check Single" + "_" + DateTime.Now.ToString("yyyyMMdd_mmss") + ".xlsx";
+
+            #endregion
+            #region 导出前校验模板信息
+            if (string.IsNullOrEmpty(sfdDownFile.FileName))
+            {
+                MessageBox.Show("File name can't be empty, please Check, thanks!");
+                return "";
+            }
+            if (!File.Exists(fullPath))
+            {
+                MessageBox.Show("Template file does not exist, please Check, thanks!");
+                return "";
+            }
+            else
+            {
+                strExcelFileName = sfdDownFile.FileName;
+            }
+            #endregion
+
+
+            System.Globalization.CultureInfo CurrentCI = System.Threading.Thread.CurrentThread.CurrentCulture;
+            System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
+
+            Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel.Workbook ExcelBook = ExcelApp.Workbooks.Open(fullPath, Type.Missing, false, Type.Missing,
+                "htc", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+            try
+            {
+                Microsoft.Office.Interop.Excel.Worksheet WS = (Microsoft.Office.Interop.Excel.Worksheet)ExcelBook.Worksheets[2];
+                Microsoft.Office.Interop.Excel.Range rng;
+                rng = WS.get_Range(WS.Cells[2, 1], WS.Cells[WS.UsedRange.Rows.Count, 30]);
+                int rowCount = WS.UsedRange.Rows.Count - 1;
+                object[,] o = new object[1, 1];
+                o = (object[,])rng.Value2;
+                foreach (clsOrderDatabaseinfo temp in FilterOrderResults)
+                {
+                    for (int i = 1; i <= Convert.ToInt32(temp.shijijianshu2); i++)
+                    {
+                        clsTipsinfo item = new clsTipsinfo();
+                        FilterTIPResults = new List<clsTipsinfo>();
+
+                        item.yuandanhao = temp.yundanhao;
+                        item.shifazhan = temp.dizhi;
+                        item.mudizhan = temp.daodaidi2;
+                        item.jianshu = temp.shijijianshu2 + "-" + i.ToString(); //temp.shijijianshu2;
+                        item.shouhuoren = temp.quhuoren3;
+                        item.dianhua = temp.dianhua2;
+                        item.Input_Date = DateTime.Now.ToString("yyyyMMdd");
+                        FilterTIPResults.Add(item);
+                        // Run2(FilterTIPResults);
+
+                        WS.Cells[5, 3] = temp.yundanhao;
+                        WS.Cells[4, 3] = temp.dizhi;
+                        WS.Cells[4, 5] = temp.daodaidi2;
+                        WS.Cells[5, 5] = temp.shijijianshu2 + "-" + i.ToString();
+                        WS.Cells[6, 3] = temp.quhuoren3;
+                        WS.Cells[6, 5] = temp.dianhua2;
+
+
+                        Excel.Range excelRange = WS.get_Range(WS.Cells[1, 1], WS.Cells[9, 5]);
+              
+                        ExcelApp.ActiveWindow.View = Excel.XlWindowView.xlPageBreakPreview;
+
+                        //ExcelApp.Visible = true;
+                        //ExcelApp.ScreenUpdating = true;
+
+                        //  WS.PageSetup.PaperSize = Excel.XlPaperSize.xlPaperB5;//纸张大小
+                        ExcelApp.ActiveWindow.Zoom = 80;
+                        excelRange.EntireColumn.AutoFit();
+
+                        WS.PageSetup.CenterHorizontally = true;
+                        string defaultPrinter = ExcelApp.ActivePrinter;
+                        Externs.SetDefaultPrinter(tisprint);               
+
+                        WS.PrintOutEx();
+
+                        Externs.SetDefaultPrinter(defaultPrinter);
+
+
+                    }
+                }
+                clsCommHelp.CloseExcel(ExcelApp, ExcelBook);
+
+                return ResaveName;
+            }
+            catch (Exception ex)
+            {
+                ExcelApp.DisplayAlerts = false;
+                ExcelApp.Quit();
+                ExcelBook = null;
+                ExcelApp = null;
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+                throw ex;
+            }
+
+        }
+
+
+
+        #endregion
         #endregion
     }
 }
