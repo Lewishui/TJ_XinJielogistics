@@ -1756,8 +1756,8 @@ namespace TJ.Buiness
             string deviceInfo =
         "<DeviceInfo>" +
         "  <OutputFormat>EMF</OutputFormat>" +
-        "  <PageWidth>26cm</PageWidth>" +
-        "  <PageHeight>15.2cm</PageHeight>" +
+        "  <PageWidth>15.2cm</PageWidth>" +
+        "  <PageHeight>26cm</PageHeight>" +
         "  <MarginTop>0.1cm</MarginTop>" +
         "  <MarginLeft>0.1cm</MarginLeft>" +
         "  <MarginRight>0.1cm</MarginRight>" +
