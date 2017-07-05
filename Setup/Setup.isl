@@ -2855,6 +2855,8 @@
 		<row><td>COMPANY_NAME</td><td>2052</td><td>公司名称</td><td>0</td><td/><td>-2094679827</td></row>
 		<row><td>DN_AlwaysInstall</td><td>2052</td><td>始终安装</td><td>0</td><td/><td>-2094696211</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>2052</td><td>系统颜色设置不足以运行 [ProductName]。</td><td>0</td><td/><td>-2094696211</td></row>
+		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION35</td><td>1033</td><td>Microsoft .NET Framework 3.5 needs to be installed for this installation to continue.</td><td>0</td><td/><td>195373281</td></row>
+		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION35</td><td>2052</td><td>Microsoft .NET Framework 3.5 needs to be installed for this installation to continue.</td><td>0</td><td/><td>195383521</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION45FULL</td><td>1033</td><td>Microsoft .NET Framework 4.5 Full package or greater needs to be installed for this installation to continue.</td><td>0</td><td/><td>-2094675731</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION45FULL</td><td>2052</td><td>Microsoft .NET Framework 4.5 Full package or greater needs to be installed for this installation to continue.</td><td>0</td><td/><td>-2094675731</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_OS</td><td>2052</td><td>操作系统不足以运行 [ProductName]。</td><td>0</td><td/><td>-2094696211</td></row>
@@ -3967,6 +3969,8 @@
 		<row><td>ID_STRING3</td><td>2052</td><td>new</td><td>0</td><td/><td>-2094681875</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>LAUNCH~1.EXE|Launch TJ_XinJielogistics.exe</td><td>0</td><td/><td>-2094703763</td></row>
 		<row><td>ID_STRING4</td><td>2052</td><td>LAUNCH~1.EXE|Launch TJ_XinJielogistics.exe</td><td>0</td><td/><td>-2094703763</td></row>
+		<row><td>ID_STRING5</td><td>1033</td><td>LAUNCH~1.EXE|Launch TJ_XinJielogistics.exe</td><td>0</td><td/><td>195401953</td></row>
+		<row><td>ID_STRING5</td><td>2052</td><td>LAUNCH~1.EXE|Launch TJ_XinJielogistics.exe</td><td>0</td><td/><td>195401953</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>2052</td><td>系统将不安装此功能。</td><td>0</td><td/><td>-2094696211</td></row>
 	</table>
 
@@ -4079,6 +4083,7 @@
 		<row><td>TJ_XinJielogistics_A2D349AB4A91491293ED1929EE13D608.exe</td><td/><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\TJ_XinJielogistics.exe</td><td>0</td></row>
 		<row><td>TJ_XinJielogistics_BD679A86796E481C9739770E910CA964.exe</td><td/><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\TJ_XinJielogistics.exe</td><td>0</td></row>
 		<row><td>TJ_XinJielogistics_E55564491110464CB5F79A2007B404B3.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>TJ_XinJielogistics_FC8F0401F4FE4A04B22EA9C5F5812CC2.exe</td><td/><td>C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ_XinJielogistics\bin\Debug\TJ_XinJielogistics.exe</td><td>0</td></row>
 		<row><td>UNINST_Uninstall_S_91A85EC8D40E4657A413ED05931E4FB1.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2012SpringLE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
 	</table>
 
@@ -4752,6 +4757,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
 		<row><td>TJ_XinJielogistics.exe</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME3##</td><td>TJ_XinJielogistics.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>TJ_XinJielogistics_A2D349AB4A91491293ED1929EE13D608.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>TJ_XinJielogistics.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME3##</td><td>TJ_XinJielogistics.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>TJ_XinJielogistics_FC8F0401F4FE4A04B22EA9C5F5812CC2.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>TJ_XinJielogistics.vshost.exe</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME4##</td><td>TJ_XinJielogistics.vshost.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>TJ_XinJielogistics_E55564491110464CB5F79A2007B404B3.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>UNINST_Uninstall_Setup</td><td>setup</td><td>UNINST|Uninstall Setup</td><td>NewComponent1</td><td>[SystemFolder]msiexec.exe</td><td>/x {7B41A07C-631C-448E-B20C-6064D21F4833}</td><td/><td/><td>UNINST_Uninstall_S_91A85EC8D40E4657A413ED05931E4FB1.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>

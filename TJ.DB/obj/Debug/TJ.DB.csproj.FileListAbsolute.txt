@@ -2,3 +2,4 @@ C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.DB\bi
 C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.DB\bin\Debug\TJ.DB.pdb
 C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.DB\obj\Debug\TJ.DB.dll
 C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.DB\obj\Debug\TJ.DB.pdb
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.DB\obj\Debug\TJ.DB.csprojResolveAssemblyReference.cache

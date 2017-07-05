@@ -59,6 +59,7 @@ namespace TJ.DB
 
         public string yundanhao { get; set; }
         public string comment { get; set; }
+        public bool showimage { get; set; }
     }
     public class clsuserinfo
     {

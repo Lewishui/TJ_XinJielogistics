@@ -1584,11 +1584,14 @@ namespace TJ.Buiness
             //report.DataSources.Add(
             //   new ReportDataSource("Sales", FilterOrderResults));
             report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", FilterOrderResults));
-            
+
             Export(report);
             m_currentPageIndex = 0;
 
-            Print(orderprint, 944, 598);
+            // Print(orderprint, 944, 598);
+            //Print(orderprint, 598, 944);
+            //不调用调整printDoc.DefaultPageSettings.PaperSize
+            Print(orderprint, 0, 0);
         }
         public void Run2(List<clsTipsinfo> FilterOrderResults)
         {
@@ -1598,7 +1601,7 @@ namespace TJ.Buiness
             //report.DataSources.Add(
             //   new ReportDataSource("Sales", FilterOrderResults));
             report.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet2", FilterOrderResults));
-
+           
             Export2(report);
             m_currentPageIndex = 0;
             Print(tisprint, 393, 393);
@@ -1688,7 +1691,8 @@ namespace TJ.Buiness
             //执行打印操作，Print方法将触发PrintPage事件。
             printDoc.DefaultPageSettings.Landscape = false;
             //大小
-            printDoc.DefaultPageSettings.PaperSize = new PaperSize("Custom", lenpage, withpage);
+            if (lenpage != 0)
+                printDoc.DefaultPageSettings.PaperSize = new PaperSize("Custom", lenpage, withpage);
 
 
             printDoc.Print();
@@ -1745,16 +1749,48 @@ namespace TJ.Buiness
             //  "  <MarginBottom>0.25in</MarginBottom>" +
             //  "</DeviceInfo>";       
 
+            //    string deviceInfo =
+            //"<DeviceInfo>" +
+            //"  <OutputFormat>EMF</OutputFormat>" +
+            //"  <PageWidth>26cm</PageWidth>" +
+            //"  <PageHeight>15.2cm</PageHeight>" +
+            //"  <MarginTop>0.1cm</MarginTop>" +
+            //"  <MarginLeft>0.1cm</MarginLeft>" +
+            //"  <MarginRight>0.1cm</MarginRight>" +
+            //"  <MarginBottom>0.1cm</MarginBottom>" +
+            //"</DeviceInfo>";
+            //           string deviceInfo =
+            //"<DeviceInfo>" +
+            //"  <OutputFormat>EMF</OutputFormat>" +
+            //"  <PageWidth>9.44in</PageWidth>" +
+            //"  <PageHeight>5.98in</PageHeight>" +
+            //"  <MarginTop>0.0cm</MarginTop>" +
+            //"  <MarginLeft>0.0cm</MarginLeft>" +
+            //"  <MarginRight>0.0cm</MarginRight>" +
+            //"  <MarginBottom>0.0cm</MarginBottom>" +
+            //"</DeviceInfo>";
+
             string deviceInfo =
-        "<DeviceInfo>" +
-        "  <OutputFormat>EMF</OutputFormat>" +
-        "  <PageWidth>15.2cm</PageWidth>" +
-        "  <PageHeight>26cm</PageHeight>" +
-        "  <MarginTop>0.1cm</MarginTop>" +
-        "  <MarginLeft>0.1cm</MarginLeft>" +
-        "  <MarginRight>0.1cm</MarginRight>" +
-        "  <MarginBottom>0.1cm</MarginBottom>" +
-        "</DeviceInfo>";
+"<DeviceInfo>" +
+"  <OutputFormat>EMF</OutputFormat>" +
+"  <PageWidth>8.66in</PageWidth>" +
+"  <PageHeight>5.2</PageHeight>" +
+"  <MarginTop>0.0cm</MarginTop>" +
+"  <MarginLeft>0.0cm</MarginLeft>" +
+"  <MarginRight>0.0cm</MarginRight>" +
+"  <MarginBottom>0.0cm</MarginBottom>" +
+"</DeviceInfo>";
+
+            //            string deviceInfo =
+            //"<DeviceInfo>" +
+            //"  <OutputFormat>EMF</OutputFormat>" +
+            //"  <PageWidth>8.03in</PageWidth>" +
+            //"  <PageHeight>5.39in</PageHeight>" +
+            //"  <MarginTop>0.0cm</MarginTop>" +
+            //"  <MarginLeft>0.0cm</MarginLeft>" +
+            //"  <MarginRight>0.0cm</MarginRight>" +
+            //"  <MarginBottom>0.0cm</MarginBottom>" +
+            //"</DeviceInfo>";
 
 
             Warning[] warnings;
@@ -2013,7 +2049,7 @@ namespace TJ.Buiness
 
 
                         Excel.Range excelRange = WS.get_Range(WS.Cells[1, 1], WS.Cells[9, 5]);
-              
+
                         ExcelApp.ActiveWindow.View = Excel.XlWindowView.xlPageBreakPreview;
 
                         //ExcelApp.Visible = true;
@@ -2025,7 +2061,7 @@ namespace TJ.Buiness
 
                         WS.PageSetup.CenterHorizontally = true;
                         string defaultPrinter = ExcelApp.ActivePrinter;
-                        Externs.SetDefaultPrinter(tisprint);               
+                        Externs.SetDefaultPrinter(tisprint);
 
                         WS.PrintOutEx();
 

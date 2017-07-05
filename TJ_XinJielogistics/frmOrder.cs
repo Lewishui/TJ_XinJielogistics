@@ -273,6 +273,7 @@ namespace TJ_XinJielogistics
             {
                 if ((bool)dataGridView.Rows[i].Cells[0].EditedFormattedValue == true)
                 {
+                    
                     FilterOrderResults = new List<clsOrderDatabaseinfo>();
 
                     row = dataGridView.Rows[i];
@@ -280,6 +281,7 @@ namespace TJ_XinJielogistics
                     FilterOrderResults.Add(model);
                     if (this.noReplaceRadioButton.Checked == true)
                     {
+                     
                         var form = new frmprint(FilterOrderResults);
                         if (form.ShowDialog() == DialogResult.OK)
                         {
@@ -288,6 +290,8 @@ namespace TJ_XinJielogistics
                     }
                     else if (this.replaceRadioButton.Checked == true)
                     {
+                        //隐藏背景图
+                        FilterOrderResults[0].showimage = true;
 
                        BusinessHelp.Run(FilterOrderResults);
                        
