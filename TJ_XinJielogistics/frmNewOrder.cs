@@ -378,6 +378,9 @@ namespace TJ_XinJielogistics
             NewMethod(item);
             List<clsOrderDatabaseinfo> FilterOrderResults = new List<clsOrderDatabaseinfo>();
             FilterOrderResults.Add(item);
+            //隐藏背景图
+            FilterOrderResults[0].showimage = true;
+
             BusinessHelp.Run(FilterOrderResults);
             save();
         }
@@ -392,6 +395,9 @@ namespace TJ_XinJielogistics
             NewMethod(item);
             List<clsOrderDatabaseinfo> FilterOrderResults = new List<clsOrderDatabaseinfo>();
             FilterOrderResults.Add(item);
+            //隐藏背景图
+            FilterOrderResults[0].showimage = true;
+
             BusinessHelp.Run(FilterOrderResults);
             BusinessHelp.printTIP(BusinessHelp, FilterOrderResults);
             save();

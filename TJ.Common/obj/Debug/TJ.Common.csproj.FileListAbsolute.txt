@@ -6,3 +6,4 @@ C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Commo
 C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Common\bin\Debug\office.dll
 C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Common\bin\Debug\Microsoft.Office.Interop.Excel.xml
 C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Common\bin\Debug\office.xml
+C:\mysteap\work_office\ProjectOut\天津信捷物流\TJ_XinJielogistics\TJ.Common\obj\Debug\TJ.Common.csprojResolveAssemblyReference.cache
