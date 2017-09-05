@@ -370,20 +370,20 @@ namespace TJ_XinJielogistics
             try
             {
                 #region Noway
-                DateTime oldDate = DateTime.Now;
-                DateTime dt3;
-                string endday = DateTime.Now.ToString("yyyy/MM/dd");
-                dt3 = Convert.ToDateTime(endday);
-                DateTime dt2;
-                dt2 = Convert.ToDateTime("2017/07/23");
+                //DateTime oldDate = DateTime.Now;
+                //DateTime dt3;
+                //string endday = DateTime.Now.ToString("yyyy/MM/dd");
+                //dt3 = Convert.ToDateTime(endday);
+                //DateTime dt2;
+                //dt2 = Convert.ToDateTime("2020/07/23");
 
-                TimeSpan ts = dt2 - dt3;
-                int timeTotal = ts.Days;
-                if (timeTotal < 0)
-                {
-                    MessageBox.Show("Please Contact your administrator !");
-                    return;
-                }
+                //TimeSpan ts = dt2 - dt3;
+                //int timeTotal = ts.Days;
+                //if (timeTotal < 0)
+                //{
+                //    MessageBox.Show("Error 23082:Please Contact your administrator !");
+                //    return;
+                //}
                 #endregion
 
 

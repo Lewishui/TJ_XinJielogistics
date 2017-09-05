@@ -462,7 +462,7 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>4.16947in</Top>
+            <Top>4.10697in</Top>
             <Left>0.71542in</Left>
             <Height>0.26042in</Height>
             <Width>0.8125in</Width>
@@ -491,7 +491,7 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>4.0101in</Top>
+            <Top>4.1351in</Top>
             <Left>1.77916in</Left>
             <Height>0.1823in</Height>
             <Width>0.85417in</Width>
@@ -542,7 +542,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=IIf(Fields!jiesuanfangshi2.Value = "月结","X","")</Value>
+                    <Value>=IIf(Fields!jiesuanfangshi2.Value = "月结","V","")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontSize>14pt</FontSize>
@@ -576,7 +576,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=IIf(Fields!jiesuanfangshi2.Value = "现结", "X", "")</Value>
+                    <Value>=IIf(Fields!jiesuanfangshi2.Value = "现结", "V", "")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontSize>14pt</FontSize>
@@ -610,7 +610,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=IIf(Fields!jiesuanfangshi2.Value = "到付", "X", "")</Value>
+                    <Value>=IIf(Fields!jiesuanfangshi2.Value = "到付", "V", "")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontSize>14pt</FontSize>
@@ -883,7 +883,7 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>4.12048in</Top>
+            <Top>4.10798in</Top>
             <Left>4.16724in</Left>
             <Height>0.1823in</Height>
             <Width>0.53385in</Width>
@@ -1000,7 +1000,7 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>4.12048in</Top>
+            <Top>4.10798in</Top>
             <Left>5.59042in</Left>
             <Height>0.1823in</Height>
             <Width>0.53385in</Width>
@@ -1022,7 +1022,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=IIf(Fields!kongyun4.Value = "true", "X", "")</Value>
+                    <Value>=IIf(Fields!kongyun4.Value = "true", "V", "")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontSize>14pt</FontSize>
@@ -1056,7 +1056,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=IIf(Fields!luyun4.Value = "true", "X", "")</Value>
+                    <Value>=IIf(Fields!luyun4.Value = "true", "V", "")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontSize>14pt</FontSize>
@@ -1184,7 +1184,7 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>3.77794in</Top>
+            <Top>3.76544in</Top>
             <Left>7.55656in</Left>
             <Height>0.2387in</Height>
             <Width>0.70313in</Width>
